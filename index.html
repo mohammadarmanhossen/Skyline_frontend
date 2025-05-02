@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="./output.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
+</head>
+
+<body class="bg-white ">
+    
+    <nav class="bg-gray-800 p-5 fixed top-0 left-0 w-full shadow-md z-50">
+        <div class="container mx-auto flex justify-between items-center ">
+            <a href="home.html" class="text-white text-xl md:text-4xl font-bold ">SKYLINE</a>
+            <button id="menu-btn" class="block md:hidden text-black focus:outline-none text-3xl hover:text">
+                ☰
+            </button>
+            <ul id="menu" class="hidden md:flex space-x-6 text-white text-xl">
+                <li><a href="index.html" class="hover:text-gray-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-gray-400">About</a></li>
+                <li><a href="service.html" class="hover:text-gray-400">Service</a></li>
+                <li><a href="booking.html" class="hover:text-gray-400">Booking</a></li>
+                <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
+            </ul>
+            <ul class="text-center hidden sm:block" id="navbarElement">
+                <div class="items-center gap-5"></div>
+            </ul>
+    
+        </div>
+    </nav>
+
+
+    <main>
+
+        <div class="hero-section h-[50vh] relative">
+            <img src="./image/banner-02.jpg" alt="Banner" class="object-cover w-full h-full pt-20">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4">
+
+                <div class="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
+                    <select id="district-select" class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <option value="all">All Districts</option>
+                    </select>
+                
+                    <input type="text" id="search" placeholder="Search..." class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                
+                    <button onclick="handleSearch()" class="h-12 px-6 bg-gray-600 hover:bg-gray-700 text-white rounded-lg w-full md:w-auto">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main-container container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+            <h1 class="text-4xl font-bold">Our Hotels</h1>
+            <section>
+                <div id="hotels" class="flex flex-wrap items-stretch pt-5"></div>
+            </section>
+              
+
+            <section class="selection 1">
+                <div class="py-5">
+                    <h1 class="text-4xl font-bold">Offers to inspire you</h1>
+                </div>
+                <div class="product-carts grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10">
+                    <div
+                        class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                        <img src="./image/arman.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h2 class="text-2xl font-bold">Family Escape</h2>
+                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>
+
+                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
+                            Read More
+                        </button>
+                    </div>
+
+                    <div
+                        class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                        <img src="./image/arman.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h2 class="text-2xl font-bold">Family Escape</h2>
+                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>
+
+                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
+                            Read More
+                        </button>
+                    </div>
+
+                    <div
+                        class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                        <img src="./image/arman.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <h2 class="text-2xl font-bold">Family Escape</h2>
+                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>
+
+                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="selection 2">
+
+                <div class=" py-5 pt-15">
+                    <h1 class="text-4xl font-bold">Customer Review</h1>
+                </div>
+
+                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
+                        <img class="h-32 w-32 mx-auto rounded-full object-cover" src="./image/arman.jpg"
+                            alt="Mohammad Arman">
+                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Mohammad Arman</h1>
+                        <p class="mt-3 text-lg text-gray-600">Shop anytime, anywhere with an intuitive interface.</p>
+                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                    </div>
+
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
+                        <img class="h-32 w-32 mx-auto rounded-full object-cover"
+                            src="./image/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="Lemon Hossen">
+                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Lemon Hossen</h1>
+                        <p class="mt-3 text-lg text-gray-600">This Product good and fast Delivery</p>
+                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
+                        <img class="h-32 w-32 mx-auto rounded-full object-cover" src="./image/arman.jpg"
+                            alt="Sazib Hossain">
+                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Sazib Hossain</h1>
+                        <p class="mt-3 text-lg text-gray-600">Low cost and product service good </p>
+                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+               <section class="selection 3">
+                <div class=" my-5 pt-5 ">
+                    <h1 class="text-4xl font-bold mb-6">Our Services</h1>
+                  
+                    <div class="overflow-x-auto">
+                      <ul class="flex space-x-6 ">
+                        
+                        <!-- Card 1 -->
+                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                          <div class="aspect-square overflow-hidden rounded-2xl">
+                            <img src="image/arman.jpg" alt="Restaurant" class="w-full h-full object-cover">
+                          </div>
+                          <div class="p-4 text-left">
+                            <h3 class="font-semibold text-lg">Restaurant</h3>
+                            <p class="text-sm text-gray-600">Children eat free, exciting fun activities</p>
+                          </div>
+                        </li>
+                  
+                        <!-- Card 2 -->
+                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                            <div class="aspect-square overflow-hidden rounded-2xl">
+                              <img src="image/arman.jpg" alt="Restaurant" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 text-left">
+                              <h3 class="font-semibold text-lg">Restaurant</h3>
+                              <p class="text-sm text-gray-600">Children eat free, exciting fun activities</p>
+                            </div>
+                          </li>
+                  
+                        <!-- Card 3 -->
+                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                            <div class="aspect-square overflow-hidden rounded-2xl">
+                              <img src="image/arman.jpg" alt="Restaurant" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 text-left">
+                              <h3 class="font-semibold text-lg">Restaurant</h3>
+                              <p class="text-sm text-gray-600">Children eat free, exciting fun activities</p>
+                            </div>
+                          </li>
+                  
+                        <!-- Add more cards similarly... -->
+                  
+                      </ul>
+                    </div>
+                  </div>
+                  
+               </section>
+
+               
+            <section class="selection 4">
+
+                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
+
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        <img class="h-10 mx-auto" src="./image/linkdin.svg" alt="Mobile Shopping">
+                        <h1 class="text-3xl font-semibold mt-3 text-gray-800">Linkedln</h1>
+                        <p class="mt-2 text-lg text-gray-600">Shop anytime,This is my linkedln account</p>
+                    </div>
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        <img class="h-10 mx-auto" src="./image/images.png" alt="Mobile Shopping">
+                        <h1 class="text-3xl font-semibold mt-3 text-gray-800">Facebook</h1>
+                        <p class="mt-2 text-lg text-gray-600">Shop anytime, This is my facebook account</p>
+                    </div>
+                    <div
+                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        <img class="h-10 mx-auto"
+                            src="./image/instagram-vector-logo-icon-social-media-logotype-black-white_901408-391.avif"
+                            alt="Mobile Shopping">
+                        <h1 class="text-3xl font-semibold mt-3 text-gray-800">Instagram</h1>
+                        <p class="mt-2 text-lg text-gray-600">Shop anytime, This is my instagram account</p>
+                    </div>
+                </div>
+               </section>
+
+               <section class="py-10 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  
+                  <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800">Share Your Moments</h1>
+                  </div>
+              
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+                    <!-- Image 1 -->
+                    <div class="w-full">
+                      <img src="image/arman.jpg"
+                           alt="Image 1"
+                           class="w-full h-64 object-cover rounded shadow">
+                    </div>
+              
+                    <!-- Image 2 -->
+                    <div class="w-full">
+                      <img src="image/arman.jpg"
+                           alt="Image 2"
+                           class="w-full h-64 object-cover rounded shadow">
+                    </div>
+              
+                    <!-- Image 3 -->
+                    <div class="w-full">
+                      <img src="image/arman.jpg"
+                           alt="Image 3"
+                           class="w-full h-64 object-cover rounded shadow">
+                    </div>
+              
+                  </div>
+                </div>
+              </section>
+              
+
+               <section class="selection 6">
+
+               </section>
+
+
+        </div>
+
+
+    </main>
+
+
+    <footer class="bg-gray-800 text-white text-center p-5 ">
+        <div class="container mx-auto">
+            <p class="text-sm">&copy; 2025 Skyline. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-3">
+                <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" class="hover:text-gray-400">Terms of Service</a>
+                <span>|</span>
+                <a href="#" class="hover:text-gray-400">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/navbar.js"></script>
+
+</body>
+
+</html>
