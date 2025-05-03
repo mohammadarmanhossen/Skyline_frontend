@@ -1,5 +1,5 @@
 const adminReview = () => {
-    fetch('http://127.0.0.1:8000/reviews/', {
+    fetch('https://skyline-backend-krnt.onrender.com/reviews/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const adminReview = () => {
                 const reviewId = event.target.getAttribute('data-id');
 
  
-                fetch(`http://127.0.0.1:8000/reviews/${reviewId}/`, {
+                fetch(`https://skyline-backend-krnt.onrender.com/reviews/${reviewId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

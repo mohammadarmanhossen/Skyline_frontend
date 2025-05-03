@@ -45,7 +45,7 @@ document
     document.getElementById("dropdownMenu").classList.toggle("hidden");
   });
 
-// Nav bar for mobile view
+
 
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");

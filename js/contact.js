@@ -6,7 +6,7 @@
         const message = document.getElementById("message").value;
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/client/contact/", {
+            const response = await fetch("https://skyline-backend-krnt.onrender.com/client/contact/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

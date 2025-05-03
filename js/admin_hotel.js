@@ -1,7 +1,7 @@
 
 
 const adminHotel= () => {
-    fetch('http://127.0.0.1:8000/hotels/', {
+    fetch('https://skyline-backend-krnt.onrender.com/hotels/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const adminHotel= () => {
 
 
 function deleteHotel(hotelId) {
-    fetch(`http://127.0.0.1:8000/hotels/${hotelId}/`, {
+    fetch(`https://skyline-backend-krnt.onrender.com/hotels/${hotelId}/`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

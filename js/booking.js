@@ -12,7 +12,7 @@
       total_amount: document.getElementById("total_amount").value,
     };
 
-    fetch("http://127.0.0.1:8000/bookeds/", {
+    fetch("https://skyline-backend-krnt.onrender.com/bookeds/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -33,7 +33,7 @@
 
   // Load hotels using arrow function
   const loadHotels = () => {
-    fetch("http://127.0.0.1:8000/hotels/")
+    fetch("https://skyline-backend-krnt.onrender.com/hotels/")
       .then((res) => res.json())
       .then((hotels) => {
         const select = document.getElementById("hotel_name");

@@ -17,7 +17,7 @@ const personalInfo = (event) => {
 
     console.log("personalInfo", data);
 
-    fetch(`http://127.0.0.1:8000/order/`, {
+    fetch(`https://skyline-backend-krnt.onrender.com/order/`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const showBookedHotel = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
 
-    fetch(`http://127.0.0.1:8000/bookeds/${id}/`)
+    fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${id}/`)
         .then((response) => response.json())
         .then((data) => {
             const bookedHotel = document.getElementById("bookedHotel");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
             console.log(data);
 
-            fetch("http://127.0.0.1:8000/payment/create_payment/", {
+            fetch("https://skyline-backend-krnt.onrender.com/payment/create_payment/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

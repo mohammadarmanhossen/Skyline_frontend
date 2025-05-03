@@ -22,7 +22,7 @@ const handleRegistration = (event) => {
         return;
     }
   
-    fetch("http://127.0.0.1:8000/client/register/", {
+    fetch("https://skyline-backend-krnt.onrender.com/client/register/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(info),

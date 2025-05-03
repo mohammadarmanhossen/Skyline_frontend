@@ -1,6 +1,6 @@
 
 const adminUser = () => {
-    fetch('http://127.0.0.1:8000/client/users/', {
+    fetch('https://skyline-backend-krnt.onrender.com/client/users/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const adminUser = () => {
 };
 
 const deleteUser = (userId) => {
-    fetch(`http://127.0.0.1:8000/account/user/${userId}/`, {
+    fetch(`https://skyline-backend-krnt.onrender.com/account/user/${userId}/`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const deleteUser = (userId) => {
     .then(response => {
         if (response.status === 204) {
 
-            adminUser(); // Refresh the user list
+            adminUser(); 
         } else {
             alert('Failed to delete user.');
         }

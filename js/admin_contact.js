@@ -1,5 +1,5 @@
 const adminContact= () => {
-    fetch('http://127.0.0.1:8000/client/contact/', {
+    fetch('https://skyline-backend-krnt.onrender.com/client/contact/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const adminContact= () => {
             button.addEventListener('click', (event) => {
                 const contactId = event.target.getAttribute('data-id');
 
-                fetch(`http://127.0.0.1:8000/client/contact/${contactId}/`, {
+                fetch(`https://skyline-backend-krnt.onrender.com/client/contact/${contactId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

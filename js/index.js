@@ -1,4 +1,4 @@
-const baseURL = 'http://127.0.0.1:8000/hotels/';
+const baseURL = 'https://skyline-backend-krnt.onrender.com/hotels/';
 const userId = localStorage.getItem('user_id');
 console.log("user_id :",userId);
 
@@ -68,7 +68,7 @@ const displayHotels = (hotelsData) => {
 };
 
 const loadDistricts = () => {
-    fetch('http://127.0.0.1:8000/district/')    
+    fetch('https://skyline-backend-krnt.onrender.com/district/')    
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -91,11 +91,9 @@ const handleSearch = () => {
     hotels(districtId, searchQuery);
 };
 
-// Initial load
 loadDistricts();
 hotels();
 
-// Optional: search as you type
 document.getElementById('search').addEventListener('input', handleSearch);
 document.getElementById('district-select').addEventListener('change', handleSearch);
 

@@ -6,14 +6,14 @@ const showBookingDetails = () => {
         'Content-Type': 'application/json',
     };
 
-    fetch(`http://127.0.0.1:8000/bookeds/${bookedId}/`, { headers })
+    fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${bookedId}/`, { headers })
         .then(bookedRes => bookedRes.json())
         .then(booked => {
         
             document.getElementById("bookedHotel").innerText = `Hotel: ${booked.hotel_name}, Room: ${booked.room}`;
             document.getElementById("totalAmount").innerText = `Total Amount: $${booked.total_amount}`;
 
-            return fetch(`http://127.0.0.1:8000/order/${bookedId}`, { headers });
+            return fetch(`https://skyline-backend-krnt.onrender.com/order/${bookedId}`, { headers });
         })
 
         .then(userRes => userRes.json())

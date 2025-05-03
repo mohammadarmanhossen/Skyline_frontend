@@ -1,6 +1,6 @@
 
 
-fetch('http://127.0.0.1:8000/bookeds/')
+fetch('https://skyline-backend-krnt.onrender.com/bookeds/')
 .then(response => response.json())
 .then(data => {
     const tableBody = document.getElementById('bookedTableBody');
@@ -57,7 +57,7 @@ document.addEventListener("click", (event) => {
   if (event.target.classList.contains("delete-btn")) {
       const bookedId = event.target.getAttribute("data-id");
       
-          fetch(`http://127.0.0.1:8000/bookeds/${bookedId}/`, {
+          fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${bookedId}/`, {
               method: "DELETE"
           })
           .then(response => {
@@ -83,7 +83,7 @@ const hotel_delete = () => {
             const row = event.target.closest('tr');
             const id = row.cells[0].innerText; 
 
-            fetch(`http://127.0.0.1:8000/bookeds/${id}/`, {
+            fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${id}/`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

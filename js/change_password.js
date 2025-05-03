@@ -23,7 +23,7 @@
       return;
     }
 
-    fetch(`http://127.0.0.1:8000/client/change_password/${user_id}/`, {
+    fetch(`https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -45,63 +45,3 @@
     });
   });
 
-
-// const user_id = localStorage.getItem("user_id");
-
-// const getValue = (id) => document.getElementById(id);
-
-// const handlePasswordChange = () => {
-
-
-//   const old_password = getValue("old_password").value;
-//   const new_password = getValue("new_password").value;
-//   const new_password2 = getValue("new_password2").value;
-
-//   const changedata = {
-//     old_password: old_password,
-//     new_password: new_password,
-//   };
-//   console.log(changedata);
-
-//   if (!old_password || !new_password || !new_password2) {
-//     Swal.fire("⚠️ Warning", "Please fill out all fields!", "warning");
-//     return;
-//   }
-
-//   if (old_password === new_password) {
-//     Swal.fire("❌ Error", "Old password cannot be the same as the new password!", "error");
-//     return;
-//   }
-
-//   if (new_password !== new_password2) {
-//     Swal.fire("❌ Error", "New passwords do not match!", "error");
-//     return;
-//   }
-
-//   fetch(`http://127.0.0.1:8000/client/change_password/${user_id}/`, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(changedata)
-//   })
-//   .then(response => {
-//     if (!response.ok) {
-//       return response.json().then(errorData => {
-//         throw new Error(errorData.detail || "Password change failed!");
-//       });
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     Swal.fire("✅ Success", "Password changed successfully.", "success");
-
-//     getValue("old_password").value = "";
-//     getValue("new_password").value = "";
-//     getValue("new_password2").value = "";
-//   })
-//   .catch(error => {
-//     Swal.fire("❌ Error", error.message, "error");
-//     console.error("Error:", error);
-//   });
-// };

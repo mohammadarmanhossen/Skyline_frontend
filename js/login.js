@@ -14,7 +14,7 @@ const handleLogin = (event) => {
     };
 
     // Admin login request
-    fetch("http://127.0.0.1:8000/client/admin/login/", {
+    fetch("https://skyline-backend-krnt.onrender.com/client/admin/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -45,7 +45,7 @@ const handleLogin = (event) => {
           password: password
         };
 
-        fetch("http://127.0.0.1:8000/client/login/", {
+        fetch("https://skyline-backend-krnt.onrender.com/client/login/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -115,7 +115,7 @@ const handleLogout = (event) => {
   console.log("Logging out...");
   const token = localStorage.getItem("token");
   console.log(token);
-  fetch("http://127.0.0.1:8000/client/logout/", {
+  fetch("https://skyline-backend-krnt.onrender.com//client/logout/", {
     method: "GET",
     headers: {
       Authorization: `Token ${token}`,
@@ -145,7 +145,7 @@ const adminLogout = (event) => {
   console.log("Logging out...");
   const token = localStorage.getItem("token");
   console.log(token);
-  fetch("http://127.0.0.1:8000/client/admin/logout/", {
+  fetch("https://skyline-backend-krnt.onrender.com/client/admin/logout/", {
     method: "GET",
     headers: {
       Authorization: `Token ${token}`,

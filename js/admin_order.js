@@ -1,5 +1,5 @@
 const adminOrder= () => {
-    fetch('http://127.0.0.1:8000/order/', {
+    fetch('https://skyline-backend-krnt.onrender.com/order/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const adminOrder= () => {
             button.addEventListener('click', (event) => {
                 const orderId = event.target.getAttribute('data-id');
 
-                fetch(`http://127.0.0.1:8000/order/${orderId}/`, {
+                fetch(`https://skyline-backend-krnt.onrender.com/order/${orderId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
