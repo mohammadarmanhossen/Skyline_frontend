@@ -34,7 +34,7 @@
         </div>
     </nav>
 
-
+<!-- 
     <main>
         <div class="flex flex-col gap-4 bg-gray-100 w-full md:w-64 p-6 pt-25">
             <a href="profile.html" 
@@ -64,7 +64,49 @@
         </div>
         
 
-    </main>
+    </main> -->
+
+
+    <main class="min-h-screen bg-gray-100 flex flex-col md:flex-row pt-20">
+
+        <!-- Sidebar -->
+        <aside class="bg-white w-full md:w-64 p-6 shadow-md">
+          <nav class="flex flex-col gap-4">
+            <a href="profile.html"
+               class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              My Profile
+            </a>
+            <a href="booked_hotel.html"
+               class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              Track Hotel
+            </a>
+            <a href="Change_password.html"
+               class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              Change Password
+            </a>
+          </nav>
+        </aside>
+      
+        <!-- Profile Content -->
+        <section class="flex-1 flex items-center justify-center p-6">
+          <div class="bg-white w-full max-w-md p-8 rounded-xl shadow-xl">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Profile Page</h2>
+      
+            <!-- Placeholder for dynamic user profile -->
+            <div id="user_profile" class="text-gray-700 space-y-4">
+              <!-- Example -->
+              <!--
+              <div class="flex justify-between">
+                <span class="font-medium">Name:</span>
+                <span>Mohammad Arman</span>
+              </div>
+              -->
+            </div>
+          </div>
+        </section>
+      
+      </main>
+      
 
 
     <footer class="bg-gray-800 text-white text-center p-5 ">

@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
 </head>
 
-<body class="bg-white ">
+<body class="bg-white">
     
     <nav class="bg-gray-800 p-5 fixed top-0 left-0 w-full shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center ">
@@ -42,7 +42,7 @@
             <img src="./image/journey-box-1.jpg" alt="Banner" class="object-cover w-full h-full pt-20">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4">
 
-                <div class="bg-white/80 backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
+                <div class="bg-white backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
                     <select id="district-select" class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
                         <option value="all">All Districts</option>
                     </select>
@@ -104,43 +104,47 @@
                 </div>
             </section>
 
-
-
             <section class="selection 2">
 
                 <div class=" py-5 pt-15">
                     <h1 class="text-4xl font-bold">Customer Review</h1>
                 </div>
-
                 <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
+
                     <div
-                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
-                        <img class="h-32 w-32 mx-auto rounded-full object-cover" src="./image/arman.jpg"
-                            alt="Mohammad Arman">
-                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Mohammad Arman</h1>
-                        <p class="mt-3 text-lg text-gray-600">Shop anytime, anywhere with an intuitive interface.</p>
-                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
+                            src="./image/arman.jpg" alt="Mohammad Arman">
+                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Mohammad Arman</h2>
+                        <p class="mt-2 text-center text-gray-500">Shop anytime, anywhere with an intuitive interface.
+                        </p>
+                        <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
                     </div>
 
                     <div
-                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
-                        <img class="h-32 w-32 mx-auto rounded-full object-cover"
+                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
                             src="./image/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="Lemon Hossen">
-                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Lemon Hossen</h1>
-                        <p class="mt-3 text-lg text-gray-600">This Product good and fast Delivery</p>
-                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Lemon Hossen</h2>
+                        <p class="mt-2 text-center text-gray-500">This product is good and delivery was fast.</p>
+                        <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
                     </div>
                     <div
-                        class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6 bg-white">
-                        <img class="h-32 w-32 mx-auto rounded-full object-cover" src="./image/man_3.jpg"
-                            alt="Sazib Hossain">
-                        <h1 class="text-3xl font-semibold mt-4 text-gray-800">Sazib Hossain</h1>
-                        <p class="mt-3 text-lg text-gray-600">Low cost and product service good </p>
-                        <p class="mt-3 text-lg text-yellow-400">⭐⭐⭐⭐⭐</p>
+                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
+                            src="./image/man_3.jpg" alt="Sazib Hossain">
+                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Sazib Hossain</h2>
+                        <p class="mt-2 text-center text-gray-500">Low cost and good product service.</p>
+                        <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
                     </div>
                 </div>
             </section>
-
 
 
                <section class="selection 3">
@@ -182,8 +186,7 @@
                               <p class="text-sm text-gray-600">Up to 20% off food and services</p>
                             </div>
                           </li>
-                  
-                        <!-- Add more cards similarly... -->
+
                   
                       </ul>
                     </div>
@@ -193,6 +196,9 @@
 
                
             <section class="selection 4">
+                <div class="py-5 pt-15">
+                    <h1 class="text-4xl font-bold">Social Media</h1>
+                </div>
 
                 <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
 

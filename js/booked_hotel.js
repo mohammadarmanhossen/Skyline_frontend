@@ -43,7 +43,7 @@ fetch('https://skyline-backend-krnt.onrender.com/bookeds/')
             <td class="border px-4 py-2 text-center">${item.room}</td>
             <td class="border px-4 py-2 text-center">${item.in_date}</td>
             <td class="border px-4 py-2 text-center">${item.out_date}</td>
-            <td class="border px-4 py-2 text-center font-semibold text-gray-800">$${item.total_amount}</td>
+            <td class="border px-4 py-2 text-center font-semibold text-gray-800">${item.total_amount} Tk</td>
             ${actions}
         `;
 

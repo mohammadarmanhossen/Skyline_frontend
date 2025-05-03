@@ -11,7 +11,7 @@ const showBookingDetails = () => {
         .then(booked => {
         
             document.getElementById("bookedHotel").innerText = `Hotel: ${booked.hotel_name}, Room: ${booked.room}`;
-            document.getElementById("totalAmount").innerText = `Total Amount: $${booked.total_amount}`;
+            document.getElementById("totalAmount").innerText = `Total Amount: ${booked.total_amount} Tk`;
 
             return fetch(`https://skyline-backend-krnt.onrender.com/order/${bookedId}`, { headers });
         })

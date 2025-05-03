@@ -35,52 +35,55 @@
     </nav>
 
     
-    <main>
 
-      <div class="flex flex-col gap-4 bg-gray-100 w-full md:w-64 p-6 pt-25">
-        <a href="profile.html" 
-           class="text-xl font-bold text-gray-800 hover:text-blue-600 transition border-2 border-gray-300 hover:border-blue-500 rounded-xl px-4 py-2 shadow-sm">
-            My Profile
-        </a>
-        <a href="booked_hotel.html" 
-           class="text-xl font-bold text-gray-800 hover:text-blue-600 transition border-2 border-gray-300 hover:border-blue-500 rounded-xl px-4 py-2 shadow-sm">
-            Track Hotel
-        </a>
-        <a href="Change_password.html" 
-           class="text-xl font-bold text-gray-800 hover:text-blue-600 transition border-2 border-gray-300 hover:border-blue-500 rounded-xl px-4 py-2 shadow-sm">
-            Change Password
-        </a>
-       </div>
-    
 
-       <div class="flex items-center justify-center min-h-screen bg-gray-100">
-        <div class="bg-white p-8 rounded-lg shadow-lg w-full">
 
-            
-            <table class="min-w-full table-auto border-collapse border border-gray-300">
-                <thead>
-                    <tr>
-                        <th class="px-4 py-2 border border-gray-300">ID</th>
-                        <th class="px-4 py-2 border border-gray-300">Hotel Name</th>
-                        <th class="px-4 py-2 border border-gray-300">Room</th>
-                        <th class="px-4 py-2 border border-gray-300">Check-in Date</th>
-                        <th class="px-4 py-2 border border-gray-300">Check-out Date</th>
-                        <th class="px-4 py-2 border border-gray-300">Total Amount</th>
-                        <th class="px-4 py-2 border border-gray-300">Payment</th>
-                        <th class="px-4 py-2 border border-gray-300">Details</th>
-                        <th class="px-4 py-2 border border-gray-300">Action</th>
-                      
-                      
-                    </tr>
-                </thead>
-                <tbody id="bookedTableBody">
-                    <!-- Data will be inserted here by JavaScript -->
-                </tbody>
+    <main class="min-h-screen bg-gray-100 flex flex-col md:flex-row pt-20">
+
+        <aside class="bg-white w-full md:w-64 p-6 shadow-md ">
+          <nav class="flex flex-col gap-4">
+            <a href="profile.html"
+              class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              My Profile
+            </a>
+            <a href="booked_hotel.html"
+              class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              Track Hotel
+            </a>
+            <a href="Change_password.html"
+              class="text-lg font-medium text-gray-700 hover:text-white hover:bg-blue-600 transition px-4 py-2 rounded-lg border border-gray-300 hover:border-blue-600">
+              Change Password
+            </a>
+          </nav>
+        </aside>
+      
+
+        <section class="flex-1 p-6">
+            <h1 class="text-2xl font-bold text-gray-800 mb-6">Booked Hotels Details</h1>
+          <div class="bg-white rounded-xl shadow-lg overflow-x-auto">
+            <table class="min-w-full table-auto text-sm text-gray-700 border border-gray-200">
+              <thead class="bg-gray-100 text-gray-800 text-left">
+                <tr>
+                  <th class="px-4 py-3 border">ID</th>
+                  <th class="px-4 py-3 border">Hotel Name</th>
+                  <th class="px-4 py-3 border">Room</th>
+                  <th class="px-4 py-3 border">Check-in</th>
+                  <th class="px-4 py-3 border">Check-out</th>
+                  <th class="px-4 py-3 border">Amount</th>
+                  <th class="px-4 py-3 border">Payment</th>
+                  <th class="px-4 py-3 border">Details</th>
+                  <th class="px-4 py-3 border">Action</th>
+                </tr>
+              </thead>
+              <tbody id="bookedTableBody">
+                <!-- Dynamic data from JavaScript -->
+              </tbody>
             </table>
-        </div>
-    </div>
-
-    </main>
+          </div>
+        </section>
+      
+      </main>
+      
 
 
     <footer class="bg-gray-800 text-white text-center p-5 ">

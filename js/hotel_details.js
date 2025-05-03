@@ -29,7 +29,7 @@ hotelId
 
     <!-- Book Now Button -->
     <div class="text-end mt-4">
-      <button id="book-now-btn" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-black font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
+      <button id="book-now-btn" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
         📅 Book Now
       </button>
     </div>
