@@ -78,7 +78,7 @@ hotelId
                 if (!res.ok) throw new Error("Booking failed");
                 return res.json();
               })
-              .then((data) => {
+              .then((data) => { 
                 Swal.fire("Success", "Your booking is confirmed!", "success");
               })
               .catch((err) => {
@@ -119,7 +119,11 @@ reviewForm.addEventListener("submit", (e) => {
       res.ok ? res.json() : res.json().then((err) => Promise.reject(err))
     )
     .then((result) => {
-      alert("Review submitted successfully!");
+      Swal.fire(
+        "Success",
+        "Your review has been submitted!",
+        "success"
+      );
       console.log("Server Response:", result);
       reviewForm.reset();
     });

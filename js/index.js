@@ -1,5 +1,5 @@
 const baseURL = 'https://skyline-backend-krnt.onrender.com/hotels/';
-const userId = localStorage.getItem('user_id'); 
+const userId = localStorage.getItem('user_id');
 console.log("user_id :",userId);
 
 const hotels = (districtId = 'all', searchQuery = '') => {

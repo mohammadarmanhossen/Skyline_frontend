@@ -18,12 +18,12 @@
             });
 
             if (response.ok) {
-                alert("Message sent successfully!");
+                swal.fire("Success", "Your booking is confirmed!", "success");
                 document.getElementById("contactForm").reset();
             } else {
                 const errorData = await response.json();
                 console.error("Error:", errorData);
-                alert("Failed to send message!");
+                swal.fire("Error", "Failed to send message. Please try again.", "error");
             }
 
         } catch (error) {

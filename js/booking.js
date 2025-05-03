@@ -20,11 +20,11 @@
       .then((res) => res.json().then((data) => ({ ok: res.ok, data })))
       .then(({ ok, data }) => {
         if (ok) {
-          alert("Booking successful!");
+         swal.fire("Success", "Your booking is confirmed!", "success");
           console.log(data);
           bookingForm.reset();
         } else {
-          alert("Booking failed!");
+          swal.fire("Error", "Failed to book the hotel", "error");
           console.error(data);
         }
       })
