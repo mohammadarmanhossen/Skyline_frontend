@@ -47,6 +47,7 @@ hotelId
                 "Please login to book a hotel.",
                 "warning"
               );
+              window.location.href = "/login.html";
               return;
             }
             const today = new Date();
@@ -95,10 +96,21 @@ hotelId
   : (document.getElementById("hotel-info").innerHTML =
       "<p>Hotel ID not found in URL.</p>");
 
+
+
+
 const reviewForm = document.getElementById("reviewForm");
 
 reviewForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const token = localStorage.getItem("access_token");
+
+  if (!token) {
+
+    window.location.href = "/login.html";
+    return;
+  }
 
   const data = {
     rating: document.getElementById("rating").value,
@@ -112,6 +124,7 @@ reviewForm.addEventListener("submit", (e) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`,
     },
     body: JSON.stringify(data),
   })
@@ -119,12 +132,12 @@ reviewForm.addEventListener("submit", (e) => {
       res.ok ? res.json() : res.json().then((err) => Promise.reject(err))
     )
     .then((result) => {
-      Swal.fire(
-        "Success",
-        "Your review has been submitted!",
-        "success"
-      );
+      Swal.fire("Success", "Your review has been submitted!", "success");
       console.log("Server Response:", result);
       reviewForm.reset();
+    })
+    .catch((err) => {
+      console.error("Error submitting review:", err);
+      Swal.fire("Error", "Could not submit review.", "error");
     });
 });

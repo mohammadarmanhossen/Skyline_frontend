@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link href="./output.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
@@ -14,11 +14,12 @@
 </head>
 
 <body class="bg-white">
-    
+
+
     <nav class="bg-gray-800 p-5 fixed top-0 left-0 w-full shadow-md z-50">
-        <div class="container mx-auto flex justify-between items-center ">
-            <a href="home.html" class="text-white text-xl md:text-4xl font-bold ">SKYLINE</a>
-            <button id="menu-btn" class="block md:hidden text-black focus:outline-none text-3xl hover:text">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-xl font-bold  md:text-4xl">SKYLINE</a>
+            <button id="menu-btn" class="block md:hidden text-white focus:outline-none text-3xl">
                 ☰
             </button>
             <ul id="menu" class="hidden md:flex space-x-6 text-white text-xl">
@@ -28,55 +29,69 @@
                 <li><a href="booking.html" class="hover:text-gray-400">Booking</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
-            <ul class="text-center hidden sm:block" id="navbarElement">
-                <div class="items-center gap-5"></div>
-            </ul>
-    
+            
+            <ul class="text-center hidden sm:block" id="navbarElement"></ul>
+
         </div>
+    
+        <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 p-4 space-y-2">
+            <ul class="space-y-2">
+                <li><a href="index.html" class="block hover:text-blue-500 font-bold">Home</a></li>
+                <li><a href="about.html" class="block hover:text-blue-500 font-bold">About</a></li>
+                <li><a href="service.html" class="block hover:text-blue-500 font-bold">Service</a></li>
+                <li><a href="booking.html" class="block hover:text-blue-500 font-bold">Booking</a></li>
+                <li><a href="contact.html" class="block hover:text-blue-500 font-bold">Contact</a></li>
+              </ul>
+              
+          
+            <div id="mobileNavbarElement" class="pt-2 border-t border-gray-200"></div>
+          </div>
+          
     </nav>
 
 
+    
     <main>
-
         <div class="hero-section h-[50vh] relative">
             <img src="./image/journey-box-1.jpg" alt="Banner" class="object-cover w-full h-full pt-20">
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4">
 
-                <div class="bg-white backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
-                    <select id="district-select" class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <div
+                    class="bg-white backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
+                    <select id="district-select"
+                        class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
                         <option value="all">All Districts</option>
                     </select>
-                
-                    <input type="text" id="search" placeholder="Search..." class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                
-                    <button onclick="handleSearch()" class="h-12 px-6 bg-gray-600 hover:bg-gray-700 text-white rounded-lg w-full md:w-auto">
+
+                    <input type="text" id="search" placeholder="Search..."
+                        class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+                    <button onclick="handleSearch()"
+                        class="h-12 px-6 bg-gray-600 hover:bg-gray-700 text-white rounded-lg w-full md:w-auto">
                         Search
                     </button>
                 </div>
             </div>
         </div>
-
-
         <div class="main-container container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-            <h1 class="text-4xl font-bold">Our Hotels</h1>
+            <h1 class="text-3xl md:text-4xl font-bold">Our Hotels</h1>
             <section>
                 <div id="hotels" class="flex flex-wrap items-stretch pt-5">
 
-                    
+
                 </div>
             </section>
-              
-
             <section class="selection 1">
                 <div class="py-5">
-                    <h1 class="text-4xl font-bold">Offers to inspire you</h1>
+                    <h1 class=" text-3xl md:text-4xl font-bold">Offers to inspire you</h1>
                 </div>
                 <div class="product-carts grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10">
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
-                        <img src="./image/box/offer-box-1.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <img src="./image/box/offer-box-1.jpg" alt="Product 1"
+                            class="w-full h-64 object-cover rounded-lg mb-4">
                         <h2 class="text-2xl font-bold">Family Escape</h2>
-                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>   
+                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>
 
                         <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
                             Read More
@@ -85,7 +100,8 @@
 
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
-                        <img src="/image/box/offer-box-2.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <img src="/image/box/offer-box-2.jpg" alt="Product 1"
+                            class="w-full h-64 object-cover rounded-lg mb-4">
                         <h2 class="text-2xl font-bold">Business Trip</h2>
                         <p class="text-gray-600 mt-2">Up to 20% off food and services</p>
 
@@ -96,7 +112,8 @@
 
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
-                        <img src="/image/box/offer-box-3.jpg" alt="Product 1" class="w-full h-64 object-cover rounded-lg mb-4">
+                        <img src="/image/box/offer-box-3.jpg" alt="Product 1"
+                            class="w-full h-64 object-cover rounded-lg mb-4">
                         <h2 class="text-2xl font-bold">Romance</h2>
                         <p class="text-gray-600 mt-2">Discount room rates, reward points</p>
 
@@ -110,9 +127,9 @@
             <section class="selection 2">
 
                 <div class=" py-5 pt-15">
-                    <h1 class="text-4xl font-bold">Customer Review</h1>
+                    <h1 class="text-3xl md:text font-bold">Customer Review</h1>
                 </div>
-                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
+                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20">
 
                     <div
                         class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
@@ -149,58 +166,59 @@
                 </div>
             </section>
 
-
-               <section class="selection 3">
+            <section class="selection 3">
                 <div class=" my-5 pt-5 ">
-                    <h1 class="text-4xl font-bold mb-6">Our Services</h1>
-                  
+                    <h1 class="md:text-4xl text-3xl font-bold mb-6">Our Services</h1>
+
                     <div class="overflow-x-auto">
-                      <ul class="flex space-x-6 ">
-                        
-                        <!-- Card 1 -->
-                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
-                          <div class="aspect-square overflow-hidden rounded-2xl">
-                            <img src="image/box/box-service-1.jpg" alt="Restaurant" class="w-full h-full object-cover">
-                          </div>
-                          <div class="p-4 text-left">
-                            <h3 class="font-semibold text-lg">Restaurant</h3>
-                            <p class="text-sm text-gray-600">Children eat free, exciting fun activities</p>
-                          </div>
-                        </li>
-                  
-                        <!-- Card 2 -->
-                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
-                            <div class="aspect-square overflow-hidden rounded-2xl">
-                              <img src="image/box/box-service-2.jpg" alt="Restaurant" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-4 text-left">
-                              <h3 class="font-semibold text-lg">Spa & Wellness</h3>
-                              <p class="text-sm text-gray-600">Discount Rooms Rates, reward points</p>
-                            </div>
-                          </li>
-                  
-                        <!-- Card 3 -->
-                        <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
-                            <div class="aspect-square overflow-hidden rounded-2xl">
-                              <img src="image/box/box-service-3.jpg" alt="Restaurant" class="w-full h-full object-cover">
-                            </div>
-                            <div class="p-4 text-left">
-                              <h3 class="font-semibold text-lg">Fitness Center</h3>
-                              <p class="text-sm text-gray-600">Up to 20% off food and services</p>
-                            </div>
-                          </li>
+                        <ul class="flex space-x-6 ">
 
-                  
-                      </ul>
+                            <!-- Card 1 -->
+                            <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                                <div class="aspect-square overflow-hidden rounded-2xl">
+                                    <img src="image/box/box-service-1.jpg" alt="Restaurant"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 text-left">
+                                    <h3 class="font-semibold text-lg">Restaurant</h3>
+                                    <p class="text-sm text-gray-600">Children eat free, exciting fun activities</p>
+                                </div>
+                            </li>
+
+                            <!-- Card 2 -->
+                            <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                                <div class="aspect-square overflow-hidden rounded-2xl">
+                                    <img src="image/box/box-service-2.jpg" alt="Restaurant"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 text-left">
+                                    <h3 class="font-semibold text-lg">Spa & Wellness</h3>
+                                    <p class="text-sm text-gray-600">Discount Rooms Rates, reward points</p>
+                                </div>
+                            </li>
+
+                            <!-- Card 3 -->
+                            <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
+                                <div class="aspect-square overflow-hidden rounded-2xl">
+                                    <img src="image/box/box-service-3.jpg" alt="Restaurant"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 text-left">
+                                    <h3 class="font-semibold text-lg">Fitness Center</h3>
+                                    <p class="text-sm text-gray-600">Up to 20% off food and services</p>
+                                </div>
+                            </li>
+
+
+                        </ul>
                     </div>
-                  </div>
-                  
-               </section>
+                </div>
 
-               
+            </section>
+
             <section class="selection 4">
                 <div class="py-5 pt-15">
-                    <h1 class="text-4xl font-bold">Social Media</h1>
+                    <h1 class="md:text-4xl text-3xl font-bold">Social Media</h1>
                 </div>
 
                 <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
@@ -226,46 +244,43 @@
                         <p class="mt-2 text-lg text-gray-600">Shop anytime, This is my instagram account</p>
                     </div>
                 </div>
-               </section>
+            </section>
 
-               <section class="py-10 bg-gray-50">
+            <section class="py-10 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  
-                  <div class="text-center mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">Share Your Moments</h1>
-                  </div>
-              
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              
-                    <!-- Image 1 -->
-                    <div class="w-full">
-                      <img src="image/box/share_moment_1.jpg"
-                           alt="Image 1"
-                           class="w-full h-64 object-cover rounded shadow">
+
+                    <div class="text-center mb-8">
+                        <h1 class="text-3xl font-bold text-gray-800">Share Your Moments</h1>
                     </div>
-              
-                    <!-- Image 2 -->
-                    <div class="w-full">
-                      <img src="image/box/share_moment_2.jpg"
-                           alt="Image 2"
-                           class="w-full h-64 object-cover rounded shadow">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Image 1 -->
+                        <div class="w-full">
+                            <img src="image/box/share_moment_1.jpg" alt="Image 1"
+                                class="w-full h-64 object-cover rounded shadow">
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div class="w-full">
+                            <img src="image/box/share_moment_2.jpg" alt="Image 2"
+                                class="w-full h-64 object-cover rounded shadow">
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="w-full">
+                            <img src="image/box/share_moment_3.jpg" alt="Image 3"
+                                class="w-full h-64 object-cover rounded shadow">
+                        </div>
+
                     </div>
-              
-                    <!-- Image 3 -->
-                    <div class="w-full">
-                      <img src="image/box/share_moment_3.jpg"
-                           alt="Image 3"
-                           class="w-full h-64 object-cover rounded shadow">
-                    </div>
-              
-                  </div>
                 </div>
-              </section>
-              
+            </section>
 
-               <section class="selection 6">
 
-               </section>
+            <section class="selection 6">
+
+            </section>
 
 
         </div>

@@ -25,6 +25,7 @@
           bookingForm.reset();
         } else {
           swal.fire("Error", "Failed to book the hotel", "error");
+          window.location.href = "login.html";
           console.error(data);
         }
       })
