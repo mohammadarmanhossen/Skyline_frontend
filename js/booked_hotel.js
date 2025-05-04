@@ -12,7 +12,7 @@ fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
       if (item.is_paid) {
         actions = `
                 <td class="text-center py-2">
-                    <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Paid</span>
+                    <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Complete</span>
                 </td>
                 <td class="text-center py-2">
                     <a href="./booking_details.html?id=${item.id}" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow">Details</a>
@@ -25,7 +25,7 @@ fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
         if (item.is_failed) {
           actions = `
                 <td class="text-center py-2">
-                    <a href="" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Failed</a>
+                    <span class="inline-block bg-green-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">Pending</span>
                 </td>
                 <td class="text-center py-2">
                 <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded shadow">Disable</button>
