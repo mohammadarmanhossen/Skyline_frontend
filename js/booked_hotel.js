@@ -22,10 +22,10 @@ fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
                 </td>
             `;
       } else {
-        if (item.is_paid) {
+        if (item.is_failed) {
           actions = `
                 <td class="text-center py-2">
-                    <a href="" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Faield</a>
+                    <a href="" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Failed</a>
                 </td>
                 <td class="text-center py-2">
                 <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded shadow">Disable</button>
@@ -34,10 +34,10 @@ fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
                     <button data-id="${item.id}" class="delete-btn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Delete</button>
                 </td>
             `;
-        } else if (item.is_paid) {
+        } else if (item.is_cencelled) {
           actions = `
                     <td class="text-center py-2">
-                    <a href="" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Faield</a>
+                    <a href="" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded shadow">Cencelled</a>
                   </td>
                     <td class="text-center py-2">
                     <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded shadow">Disable</button>
