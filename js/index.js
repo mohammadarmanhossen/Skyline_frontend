@@ -26,6 +26,7 @@ const hotels = (districtId = 'all', searchQuery = '') => {
     fetch(fetchURL)
         .then(res => res.json())
         .then(data => {
+            console.log(data);
             displayHotels(Array.isArray(data) ? data : []);
         })
         .catch(error => {
@@ -54,12 +55,12 @@ const displayHotels = (hotelsData) => {
                 <p class="text-gray-500 text-sm mb-3">${hotel.available_room}</p>
                 <p class="text-gray-500 text-sm mb-3">${hotel.address}</p>
                 <div class="flex justify-between items-center mb-3">
-                    <span class="text-lg font-bold text-green-400">${hotel.district_name}</span>
-                    <span class="text-lg font-bold text-green-400">৳${hotel.price_per_night}</span>
+                    <span class="text-lg font-bold text-gray-400">${hotel.district_name}</span>
+                    <span class="text-lg font-bold text-gray-400">৳${hotel.price_per_night}</span>
                 </div>
                 <a href="./hotel_details.html?id=${hotel.id}" class="block rounded-lg">
-                    <div class="flex justify-center items-center bg-amber-300 hover:bg-blue-700 rounded-lg p-2">
-                        <span class="text-black font-semibold">View Details</span>
+                    <div class="flex justify-center items-center bg-gray-600 hover:bg-gray-700 rounded-lg p-2">
+                        <span class="text-white font-semibold">View Details</span>
                     </div>
                 </a>
             </div>
