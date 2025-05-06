@@ -48,10 +48,6 @@ const personalInfo = (event) => {
    
 };
  
-
-
-
-
 const showBookedHotel = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
