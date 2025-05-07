@@ -32,7 +32,7 @@
     
   });
 
-  // Load hotels using arrow function
+
   const loadHotels = () => {
     fetch("https://skyline-backend-krnt.onrender.com/hotels/")
       .then((res) => res.json())
