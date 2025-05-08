@@ -24,13 +24,13 @@ Skyline is designed to be scalable, user-friendly, and secure — making it an i
 - **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
 ### User Access Information
-- **Admin Role:**
+- **Admin:**
 ```
 Username: admin
 Password: admin
 ```
 
-- **Normal User:**
+- **User:**
 ```
 Username: arman
 Password: arman
@@ -56,7 +56,7 @@ Password: arman
 ---
 
 
-- **Frontend Live Site:** [Netlify](https://skyline-frontend.netlify.app/)
-- **Backend Live Site:** [Render](https://skyline-backend-krnt.onrender.com/)
+- **Skyline Frontend Live Site:** [Skyline](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Live Site:** [Skyline](https://skyline-backend-krnt.onrender.com/)
 
 
