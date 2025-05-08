@@ -1,42 +1,47 @@
 
 
-    document.getElementById("contactForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
+
+    const contact = (event) => {
+        event.preventDefault();
     
-        const token = localStorage.getItem("access_token");
-        if (!token) {
-            window.location.href = "/login.html";
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const userId = localStorage.getItem("user_id"); 
+    
+        if (!userId) {
+            Swal.fire("Warning", "User not logged in!", "warning");
+            window.location.href = "login.html"; 
             return;
         }
     
-        const subject = document.getElementById("subject").value;
-        const message = document.getElementById("message").value;
+        const data = {
+            subject: subject,
+            message: message, 
+        };
     
-        try {
-            const response = await fetch("https://skyline-backend-krnt.onrender.com/client/contact/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}` 
-                },
-                body: JSON.stringify({
-                    subject: subject,
-                    message: message
-                })
-            });
+        console.log(data);
     
+        fetch("https://skyline-backend-krnt.onrender.com/client/contact/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
             if (response.ok) {
                 Swal.fire("Success", "Your message has been sent!", "success");
                 document.getElementById("contactForm").reset();
             } else {
-                const errorData = await response.json();
-                console.error("Error:", errorData);
-                Swal.fire("Error", "Failed to send message. Please try again.", "error");
+                return response.json().then(errorData => {
+                    console.error("Error:", errorData);
+                    Swal.fire("Error", "Failed to send message. Please try again.", "error");
+                });
             }
-    
-        } catch (error) {
-            console.error("Error:", error);
-            Swal.fire("Error", "Something went wrong!", "error");
-        }
-    });
+        })
+        .catch(error => {
+            console.error("Network Error:", error);
+            Swal.fire("Error", "Something went wrong. Please check your connection.", "error");
+        });
+    };
     

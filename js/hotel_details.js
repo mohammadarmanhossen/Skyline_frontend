@@ -100,45 +100,49 @@ hotelId
 
 
 
-const reviewForm = document.getElementById("reviewForm");
 
-reviewForm.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  const token = localStorage.getItem("access_token");
 
-  if (!token) {
 
-    window.location.href = "/login.html";
-    return;
+
+const review = (event) => {
+  event.preventDefault();
+
+  const rating= document.getElementById("rating").value.trim();
+  const body= document.getElementById("body").value.trim();
+  const userId = localStorage.getItem("user_id"); 
+
+  if (!userId) {
+      Swal.fire("Warning", "User not logged in!", "warning");
+      window.location.href = "login.html"; 
+      return;
   }
 
   const data = {
-    rating: document.getElementById("rating").value,
-    body: document.getElementById("body").value,
-    created: new Date().toISOString(),
+      rating: rating,
+      body: body, 
+      created: new Date().toISOString(),
   };
 
-  console.log("Review Data:", data);
+  console.log(data);
 
   fetch("https://skyline-backend-krnt.onrender.com/reviews/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`,
-    },
-    body: JSON.stringify(data),
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)
   })
-    .then((res) =>
-      res.ok ? res.json() : res.json().then((err) => Promise.reject(err))
-    )
-    .then((result) => {
-      Swal.fire("Success", "Your review has been submitted!", "success");
-      console.log("Server Response:", result);
-      reviewForm.reset();
-    })
-    .catch((err) => {
-      console.error("Error submitting review:", err);
-      Swal.fire("Error", "Could not submit review.", "error");
-    });
-});
+  .then(response => {
+      if (response.ok) {
+          Swal.fire("Success", "Your message has been sent!", "success");
+    
+      } else {
+          return response.json().then(errorData => {
+              console.error("Error:", errorData);
+              Swal.fire("Error", "Failed to send message. Please try again.", "error");
+          });
+      }
+  })
+ 
+};

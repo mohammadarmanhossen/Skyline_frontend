@@ -103,22 +103,47 @@ const userProfile = () => {
         const div = document.createElement("div");
         div.classList.add("user-all");
         div.innerHTML = `
-          <div class="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-6 w-full">
-            <div class="bg-white rounded-2xl shadow-xl w-full md:w-3/4 lg:w-2/3 xl:w-1/2 p-10">
-              <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <img src="/image/arman.jpg" alt="Profile Picture" class="w-32 h-32  border-4 border-white shadow-md">
-                <div class="text-center md:text-left space-y-4">  
-                  <p class="text-xl  text-gray-800">👤 Username: ${currentUser.username}</p>
-                  <p class="text-xl text-gray-700">📛 First Name: ${currentUser.first_name}</p>
-                  <p class="text-xl text-gray-700">🧑 Last Name: ${currentUser.last_name}</p>
-                  <p class="text-xl text-gray-700">📧 Email: ${currentUser.email}</p>
-                  <div class="pt-4">
-                    <a href="./change_password.html" class="bg-gray-600 text-white px-6 py-3 rounded-md hover:bg-gray-700 transition text-lg">✏️ Edit Profile</a>
-                  </div>
+     <div class="min-h-screen bg-gray-100 flex items-center justify-center p-6 w-full">
+    <div class="bg-white rounded-2xl shadow-xl w-full md:w-3/4 lg:w-2/3 xl:w-1/2 p-6">
+        <!-- Profile header with avatar and name -->
+        <div class="flex flex-col items-center gap-6">
+            <!-- Avatar -->
+            <img src="/image/man_3.jpg" alt="Profile Picture" class="w-32 h-32 border-4 border-indigo-600 shadow-lg rounded-full transform transition-transform hover:scale-105 duration-300">
+
+            <div class="text-center space-y-4">
+                <p class="text-xl  text-gray-800">Username : ${currentUser.username}</p>
+                <p class="text-md text-gray-700">Full Name : ${currentUser.first_name} ${currentUser.last_name}</p>
+                <p class="text-md text-gray-600">Email : ${currentUser.email}</p>
+                <div class="mt-4">
+                    <a href="./change_password.html" class="bg-gray-400  text-black px-6 py-3 rounded-lg shadow-md  transition-all duration-300 text-lg transform hover:scale-105">✏️ Edit Profile</a>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+
+        <!-- Bio Section -->
+        <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">About Me</h2>
+            <p class="text-md text-gray-700">This is a short bio or description about the user, explaining their background, skills, or interests.</p>
+        </div>
+
+        <!-- Stats Section (Repositories, Followers, Following) -->
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+                <p class="text-lg font-semibold text-gray-800">Repositories</p>
+                <p class="text-2xl text-gray-900">25</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+                <p class="text-lg font-semibold text-gray-800">Followers</p>
+                <p class="text-2xl text-gray-900">200</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-md text-center">
+                <p class="text-lg font-semibold text-gray-800">Following</p>
+                <p class="text-2xl text-gray-900">150</p>
+            </div>
+        </div>
+    </div>
+</div>
+
         `;
   
         parent.innerHTML = ""; 
