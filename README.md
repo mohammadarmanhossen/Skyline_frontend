@@ -19,8 +19,8 @@ Skyline is designed to be scalable, user-friendly, and secure — making it an i
 
 
 
-- **Skyline Frontend Live Site:** [skyline Frontend](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Live Site:** [skyline Backend](https://skyline-backend-krnt.onrender.com/)
+- **Skyline Frontend Live Site:** [Skyline Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Live Site:** [Skyline Backend](https://skyline-backend-krnt.onrender.com/)
 - **Skyline Frontend GitHub:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
 - **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
