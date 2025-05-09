@@ -14,12 +14,13 @@ Integrated with SSLCommerz, providing a reliable and secure payment gateway for 
 
 Review and Rating System
 Users can leave honest reviews and rate hotels based on their experience, helping others make informed decisions.
+User profile password forget system.
 Skyline is designed to be scalable, user-friendly, and secure — making it an ideal solution for real-world hotel booking needs.
 
 
 
-- **Skyline Frontend Live Site:** [skyline-frontend.netlify.app](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Live Site:** [skyline-backend-krnt.onrender.com](https://skyline-backend-krnt.onrender.com/)
+- **Skyline Frontend Live Site:** [skyline Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Live Site:** [skyline Backend](https://skyline-backend-krnt.onrender.com/)
 - **Skyline Frontend GitHub:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
 - **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
@@ -39,7 +40,9 @@ Password: arman
 
 ## Key Features
 - **User Authentication** via Gmail OAuth
+- **User Registration Login Logout** via Gmail OAuth
 - **CRUD Operations** for hotel and booking management
+- **User Profile password Forget** view profile
 - **SSLCommerz Payment Integration** for secure payments
 - **Hotel Review System** for customer feedback
 - **Scalable PostgreSQL Database** with Django Rest Framework API
@@ -56,7 +59,7 @@ Password: arman
 ---
 
 
-- **Skyline Frontend Live Site:** [Skyline](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Live Site:** [Skyline](https://skyline-backend-krnt.onrender.com/)
+- **Skyline Frontend Live Site:** [Skyline Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Live Site:** [Skyline Backend](https://skyline-backend-krnt.onrender.com/)
 
 
