@@ -18,7 +18,7 @@
 
     <nav class="bg-gray-800 p-5 fixed top-0 left-0 w-full shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-white text-xl font-bold  md:text-4xl">SKYLINE</a>
+            <a href="index.html" class="text-white text-xl font-bold  md:text-4xl">Skyline</a>
             <button id="menu-btn" class="block md:hidden text-white focus:outline-none text-3xl">
                 ☰
             </button>
@@ -29,11 +29,11 @@
                 <li><a href="booking.html" class="hover:text-gray-400">Booking</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
             </ul>
-            
+
             <ul class="text-center hidden sm:block" id="navbarElement"></ul>
 
         </div>
-    
+
         <div id="mobile-menu" class="hidden md:hidden bg-white text-gray-800 p-4 space-y-2">
             <ul class="space-y-2">
                 <li><a href="index.html" class="block hover:text-blue-500 font-bold">Home</a></li>
@@ -41,28 +41,27 @@
                 <li><a href="service.html" class="block hover:text-blue-500 font-bold">Service</a></li>
                 <li><a href="booking.html" class="block hover:text-blue-500 font-bold">Booking</a></li>
                 <li><a href="contact.html" class="block hover:text-blue-500 font-bold">Contact</a></li>
-              </ul>
-              
-          
+            </ul>
+
+
             <div id="mobileNavbarElement" class="pt-2 border-t border-gray-200"></div>
-          </div>
-          
+        </div>
+
     </nav>
 
 
-    
     <main>
-        <div class="hero-section h-[50vh] relative">
-            <img src="./image/Best_hotel.avif" alt="Banner" class="object-cover w-full h-full pt-20 mb-20">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4">
 
+        <div class="hero-section h-[50vh] relative pt-20">
+            <img src="./image/Best_hotel.avif" alt="Banner"
+                class="absolute inset-0 w-full h-full object-cover z-0 brightness-60">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 pt-20">
                 <div
-                    class="bg-white backdrop-blur-md p-6 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
+                    class="bg-white backdrop-blur-md p-5 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
                     <select id="district-select"
-                              class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
                         <option value="all">🌍 All Districts</option>
-                     </select>
-
+                    </select>
 
                     <input type="text" id="search" placeholder="Search..."
                         class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
@@ -74,14 +73,12 @@
                 </div>
             </div>
         </div>
-        <div class="main-container container mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-            <h1 class="text-3xl md:text-4xl font-bold">Our Hotels</h1>
-            <section>
-                <div id="hotels" class="flex flex-wrap items-stretch pt-5">
 
 
-                </div>
-            </section>
+
+
+        <div class="main-container container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+
             <section class="selection 1">
                 <div class="py-5">
                     <h1 class=" text-3xl md:text-4xl font-bold">Offers to inspire you</h1>
@@ -89,48 +86,61 @@
                 <div class="product-carts grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10">
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
-                        <img src="./image/box/offer-box-1.jpg" alt="Product 1"
+                        <img src="/image/box/offer-box-3.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h2 class="text-2xl font-bold">Family Escape</h2>
-                        <p class="text-gray-600 mt-2">Children eat free, exciting fun activities.</p>
-
-                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
-                            Read More
-                        </button>
+                        <div class="flex flex-col items-center text-center p-6 space-y-4">
+                            <h2 class="text-2xl font-bold">Family Escape</h2>
+                            <p class="text-gray-600">Children eat free, exciting fun activities.</p>
+                            <p class=" text-amber-700">Read More</p>
+                        </div>
                     </div>
+
 
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
-                        <img src="/image/box/offer-box-2.jpg" alt="Product 1"
+                        <img src="/image/box/offer-box-3.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h2 class="text-2xl font-bold">Business Trip</h2>
-                        <p class="text-gray-600 mt-2">Up to 20% off food and services</p>
-
-                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
-                            Read More
-                        </button>
+                        <div class="flex flex-col items-center text-center p-6 space-y-4">
+                            <h2 class="text-2xl font-bold">Family Escape</h2>
+                            <p class="text-gray-600">Children eat free, exciting fun activities.</p>
+                            <p class=" text-amber-700">Read More</p>
+                        </div>
                     </div>
 
                     <div
                         class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
                         <img src="/image/box/offer-box-3.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
-                        <h2 class="text-2xl font-bold">Romance</h2>
-                        <p class="text-gray-600 mt-2">Discount room rates, reward points</p>
-
-                        <button class="bg-gray-500 text-white px-6 py-3 rounded mt-auto hover:bg-gray-600">
-                            Read More
-                        </button>
+                        <div class="flex flex-col items-center text-center p-6 space-y-4">
+                            <h2 class="text-2xl font-bold">Family Escape</h2>
+                            <p class="text-gray-600">Children eat free, exciting fun activities.</p>
+                            <p class=" text-amber-700">Read More</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
+
+
+            <section>
+                <div class="py-5">
+                    <h1 class=" text-3xl md:text-4xl font-bold pt-20">Our rooms</h1>
+                </div>
+                <div id="hotels" class="flex flex-wrap items-stretch pt-5">
+
+
+                </div>
+            </section>
+
+
+
+
             <section class="selection 2">
 
-                <div class=" py-5 pt-15">
+                 <div class="my-5 pt-10 ">
                     <h1 class="text-3xl md:text font-bold">Customer Review</h1>
                 </div>
-                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20">
+                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-5">
 
                     <div
                         class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
@@ -168,13 +178,13 @@
             </section>
 
             <section class="selection 3">
-                <div class=" my-5 pt-5 ">
-                    <h1 class="md:text-4xl text-3xl font-bold mb-6">Our Services</h1>
+                <div class=" my-5 pt-10 ">
+                    <h1 class="text-3xl md:text font-bold mb-10">Our Services</h1>
 
                     <div class="overflow-x-auto">
                         <ul class="flex space-x-6 ">
 
-                            <!-- Card 1 -->
+
                             <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
                                 <div class="aspect-square overflow-hidden rounded-2xl">
                                     <img src="image/box/box-service-1.jpg" alt="Restaurant"
@@ -186,7 +196,7 @@
                                 </div>
                             </li>
 
-                            <!-- Card 2 -->
+              
                             <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
                                 <div class="aspect-square overflow-hidden rounded-2xl">
                                     <img src="image/box/box-service-2.jpg" alt="Restaurant"
@@ -198,7 +208,7 @@
                                 </div>
                             </li>
 
-                            <!-- Card 3 -->
+            
                             <li class="min-w-[250px] bg-white rounded-xl shadow-md ">
                                 <div class="aspect-square overflow-hidden rounded-2xl">
                                     <img src="image/box/box-service-3.jpg" alt="Restaurant"
@@ -218,11 +228,11 @@
             </section>
 
             <section class="selection 4">
-                <div class="py-5 pt-15">
-                    <h1 class="md:text-4xl text-3xl font-bold">Social Media</h1>
+                <div class="py-5 pt-10">
+                    <h1 class="text-3xl md:text font-bold mb-5">Social Media</h1>
                 </div>
 
-                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-20  pt-20">
+                <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
 
                     <div
                         class="container-1 flex flex-col text-center border-8 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
@@ -247,46 +257,34 @@
                 </div>
             </section>
 
-            <section class="py-10 bg-gray-50">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                    <div class="text-center mb-8">
-                        <h1 class="text-3xl font-bold text-gray-800">Share Your Moments</h1>
+            <section class="selection-6 mb-20">
+                <div class="py-5 pt-15">
+                    <h1 class="text-3xl md:text font-bold">Share Your Moments</h1>
+                </div>
+                <div class="product-carts grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10">
+                    <div
+                        class="product-cart group overflow-hidden rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="image/box/share_moment_1.jpg" alt="Share Moment 1"
+                            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                        <!-- Image 1 -->
-                        <div class="w-full">
-                            <img src="image/box/share_moment_1.jpg" alt="Image 1"
-                                class="w-full h-64 object-cover rounded shadow">
-                        </div>
-
-                        <!-- Image 2 -->
-                        <div class="w-full">
-                            <img src="image/box/share_moment_2.jpg" alt="Image 2"
-                                class="w-full h-64 object-cover rounded shadow">
-                        </div>
-
-                        <!-- Image 3 -->
-                        <div class="w-full">
-                            <img src="image/box/share_moment_3.jpg" alt="Image 3"
-                                class="w-full h-64 object-cover rounded shadow">
-                        </div>
-
+                    <div
+                        class="product-cart group overflow-hidden rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="image/box/share_moment_2.jpg" alt="Share Moment 2"
+                            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
                     </div>
+
+                    <div
+                        class="product-cart group overflow-hidden rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                        <img src="image/box/share_moment_3.jpg" alt="Share Moment 3"
+                            class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+
                 </div>
             </section>
 
-
-            <section class="selection 6">
-
-            </section>
-
-
         </div>
-
-
     </main>
 
 
@@ -306,6 +304,7 @@
     <script src="./js/index.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
 </body>
 

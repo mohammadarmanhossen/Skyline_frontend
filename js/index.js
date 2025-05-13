@@ -50,21 +50,24 @@ const displayHotels = (hotelsData) => {
         <div class="max-w-sm bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden m-4">
             <img class="w-full h-56 object-cover" src="${hotel.image_url}" alt="${hotel.hotel_name}">
             <div class="px-6 py-4">
-                <h5 class="text-2xl font-semibold text-gray-800 mb-1">${hotel.hotel_name}</h5>
-                <p class="text-gray-500 text-sm mb-3">${hotel.description}</p>
-                <p class="text-gray-500 text-sm mb-3">${hotel.available_room}</p>
-                <p class="text-gray-500 text-sm mb-3">${hotel.address}</p>
-                <div class="flex justify-between items-center mb-3">
-                    <span class="text-lg font-bold text-gray-400">${hotel.district_name}</span>
-                    <span class="text-lg font-bold text-gray-400">৳${hotel.price_per_night}</span>
-                </div>
+                <h5 class="text-2xl font-semibold text-gray-700 mb-1">${hotel.hotel_name}</h5>
+                <p class="text-gray-700 text-sm mb-3">${hotel.description}</p>
+                <p class="text-gray-700 text-sm mb-3">Room : ${hotel.available_room}</p>
+               <p class="text-gray-700 text-sm mb-3">District : ${hotel.district_name}</p>
+              
+               <p class="text-gray-700 text-sm mb-3">Location : ${hotel.address}</p>
                 <a href="./hotel_details.html?id=${hotel.id}" class="block rounded-lg">
-                    <div class="flex justify-center items-center bg-gray-600 hover:bg-gray-700 rounded-lg p-2">
-                        <span class="text-white font-semibold">View Details</span>
+                    <div class="flex justify-between items-center bg-white  hover:bg-gray-50 transition-colors duration-200">
+                     <span><span class="text-black font-seibold">৳${hotel.price_per_night}</span>/night</span>
+                     <span class="text-amber-700 font-semibold">View Details</span>
                     </div>
                 </a>
             </div>
         </div>
+
+        
+
+        
     `).join('');
 };
 
@@ -100,5 +103,15 @@ document.getElementById('district-select').addEventListener('change', handleSear
 
 
 
+
+  const carousel = document.getElementById('carousel');
+
+  function scrollLeft() {
+    carousel.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
+  function scrollRight() {
+    carousel.scrollBy({ left: 300, behavior: 'smooth' });
+  }
 
 
