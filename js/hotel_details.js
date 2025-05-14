@@ -11,7 +11,7 @@ hotelId
         document.getElementById("hotel-info").innerHTML = `
 
 
-        <section class="bg-white py-16 px-4 md:px-12 lg:px-24">
+      <section class="bg-white py-16 px-4 md:px-12 lg:px-24">
        <div class="max-w-12xl mx-auto space-y-16">
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-xl bg-gray-50 shadow-lg">

@@ -47,7 +47,7 @@ const displayHotels = (hotelsData) => {
     }
 
     container.innerHTML = hotelsData.map(hotel => `
-        <div class="max-w-sm bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden m-4">
+        <div class="max-w-sm bg-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden m-4">
             <img class="w-full h-56 object-cover" src="${hotel.image_url}" alt="${hotel.hotel_name}">
             <div class="px-6 py-4">
                 <h5 class="text-2xl font-semibold text-gray-700 mb-1">${hotel.hotel_name}</h5>
@@ -57,7 +57,7 @@ const displayHotels = (hotelsData) => {
               
                <p class="text-gray-700 text-sm mb-3">Location : ${hotel.address}</p>
                 <a href="./hotel_details.html?id=${hotel.id}" class="block rounded-lg">
-                    <div class="flex justify-between items-center bg-white  hover:bg-gray-50 transition-colors duration-200">
+                    <div class="flex justify-between items-center bg-gray-200  transition-colors duration-200">
                      <span><span class="text-black font-seibold">৳${hotel.price_per_night}</span>/night</span>
                      <span class="text-amber-700 font-semibold">View Details</span>
                     </div>

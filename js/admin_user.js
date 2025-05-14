@@ -18,11 +18,11 @@ const adminUser = () => {
             row.classList.add('border-b');
 
             row.innerHTML = `
-                <td class="p-2">${user.id}</td>
-                <td class="p-2">${user.username}</td>
-                <td class="p-2">${user.email}</td>
-                <td class="p-2">${user.first_name}</td>
-                <td class="p-2">${user.last_name}</td>
+                <td class="">${user.id}</td>
+                <td class="">${user.username}</td>
+                <td class="">${user.email}</td>
+                <td class="">${user.first_name}</td>
+                <td class="">${user.last_name}</td>
                 <td class="p-2">
                     <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-user-id="${user.id}">Delete</button>
                 </td>

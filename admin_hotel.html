@@ -27,7 +27,7 @@
                 <button
                     class="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow">
                     <img src="image/logout.svg" alt="Logout Icon" class="w-6 h-6">
-                    <span>Logout</span>
+                     <span class="font-bold">Logout</span>
                 </button>
             </form>
         </div>
@@ -40,7 +40,7 @@
                         <button
                             class="flex gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow w-full justify-center">
                             <img src="image/logout.svg" alt="Logout Icon" class="w-6 h-6">
-                            <span>Logout</span>
+                            <span class="font-bold">Logout</span>
                         </button>
                     </form>
                 </li>
@@ -52,7 +52,7 @@
     <div class="flex flex-col md:flex-row flex-grow pt-20">
 
 
-        <aside class="w-full md:w-1/4 lg:w-1/8 bg-gray-900 text-white pt-4">
+        <aside class="w-full md:w-1/4 lg:w-1/8 bg-gray-900 text-white pt-4 p-4">
             <h2 class="text-lg font-bold text-gray-300 text-center md:text-left">Admin Panel</h2>
             <ul class="mt-4 space-y-2 text-center md:text-left">
                 <li><a href="admin_dashbord.html" class="block p-3 hover:bg-gray-700 rounded">Overview</a></li>
@@ -79,11 +79,11 @@
 
 
                 <h1 class="text-xl font-bold mt-4 mb-2">Hotel Add Form</h1>
-               
+
 
                 <form id="hotelForm" class="space-y-4 bg-white p-6 shadow rounded">
 
-                   
+
                     <div>
                         <label for="hotel_name">Hotel Name</label>
                         <input id="hotel_name" type="text" placeholder="Enter your hotel name"
@@ -111,8 +111,8 @@
                             <option value="4">Barisal</option>
                             <option value="5">Rangpur</option>
                             <option value="6">Chattogram</option>
-                          </select>
-                          
+                        </select>
+
                     </div>
 
                     <div>
@@ -127,37 +127,42 @@
                     </div>
 
                     <div>
-                        <label for="image">Image</label>
-                        <input id="image" type="text" placeholder="Enter your image" class="w-full border p-2 rounded">
+                        <label for="image">Image Url</label>
+                        <input id="image" type="text" placeholder="Enter your image url"
+                            class="w-full border p-2 rounded">
                     </div>
 
 
                     <div>
                         <button type="submit" class="bg-gray-500 text-white px-4 py-2 rounded">Add Hotel</button>
-                    </div>  
-                 
-                   
+                    </div>
+
+
                 </form>
 
-                <table class="w-full mt-2 min-w-max">
-                    <thead>
-                        <tr class="bg-gray-200">
-                            <th class="p-2">Order ID</th>
-                            <th class="p-2">Hotel Name</th>
-                            <th class="p-2">Description</th>
-                            <th class="p-2">Location</th>
-                            <th class="p-2">District</th>
-                            <th class="p-2">Price</th>
-                            <th class="p-2">Image</th>
-                            <th class="p-2">Room</th>
-                            <th class="p-2">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hotel-body">
 
-                    </tbody>
 
-                </table>
+                <div class="overflow-x-auto mt-6 ">
+                    <table class="w-full min-w-max text-sm text-left text-gray-700 bg-white">
+                        <thead class="bg-gray-400 text-black uppercase text-xs">
+                            <tr>
+                                <th class=" py-3">Order ID</th>
+                                <th class="py-3">Hotel Name</th>
+                                <th class="py-3">Description</th>
+                                <th class="py-3">Location</th>
+                                <th class="py-3">District</th>
+                                <th class="py-3">Price</th>
+                                <th class="py-3">Image</th>
+                                <th class="py-3">Room</th>
+                                <th class="py-3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hotel-body" class="divide-y divide-gray-100">
+                          
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </main>
     </div>

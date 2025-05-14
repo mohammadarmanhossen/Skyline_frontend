@@ -17,11 +17,11 @@ const adminOrder= () => {
             row.classList.add('border-b');
 
             row.innerHTML = `
-                <td class="p-2">${order.id}</td>
-                <td class="p-2">${order.name}</td>
-                <td class="p-2">${order.email}</td>
-                <td class="p-2">${order.address}</td>
-                <td class="p-2">${order.zip_code}</td>
+                <td class="">${order.id}</td>
+                <td class="">${order.name}</td>
+                <td class="">${order.email}</td>
+                <td class="">${order.address}</td>
+                <td class="">${order.zip_code}</td>
                 <td class="p-2">
                     <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${order.id}">Delete</button>
                 </td>

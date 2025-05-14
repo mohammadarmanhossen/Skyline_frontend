@@ -17,11 +17,11 @@ const adminReview = () => {
             row.classList.add('border-b');
 
             row.innerHTML = `
-                <td class="p-2">${review.id}</td>
+                <td class="">${review.id}</td>
 
-                <td class="p-2 text-center">${review.rating} ⭐</td>
-                <td class="p-2">${review.body}</td>
-                <td class="p-2">${review.created}</td>
+                <td class="">${review.rating} ⭐</td>
+                <td class="">${review.body}</td>
+                <td class="">${review.created}</td>
                 <td class="p-2">
                     <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${review.id}">Delete</button>
                 </td>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,9 +24,10 @@
             </button>
 
             <form id="logout" onsubmit="adminLogout(event)" class="hidden sm:block">
-                <button class="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow">
+                <button
+                    class="flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow">
                     <img src="image/logout.svg" alt="Logout Icon" class="w-6 h-6">
-                    <span>Logout</span>
+                     <span class="font-bold">Logout</span>
                 </button>
             </form>
         </div>
@@ -37,9 +37,10 @@
             <ul class="text-center space-y-3">
                 <li>
                     <form id="mobile-logout" onsubmit="adminLogout(event)">
-                        <button class="flex gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow w-full justify-center">
+                        <button
+                            class="flex gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow w-full justify-center">
                             <img src="image/logout.svg" alt="Logout Icon" class="w-6 h-6">
-                            <span>Logout</span>
+                            <span class="font-bold">Logout</span>
                         </button>
                     </form>
                 </li>
@@ -49,7 +50,7 @@
 
 
     <div class="flex flex-col md:flex-row flex-grow pt-20">
-        
+
 
         <aside class="w-full md:w-1/4 lg:w-1/8 bg-gray-900 text-white p-4">
             <h2 class="text-lg font-bold text-gray-300 text-center md:text-left">Admin Panel</h2>
@@ -74,23 +75,26 @@
                 <div class="p-6 bg-white shadow rounded">Orders: 150</div>
             </div>
 
-  
+
             <div class="mt-6 bg-white shadow rounded p-4 overflow-x-auto">
                 <h2 class="text-lg font-semibold">Recent Orders</h2>
-                <table class="w-full mt-2 min-w-max">
-                    <thead>
-                        <tr class="bg-gray-200">
-                            <th class="p-2">Order ID</th>
-                            <th class="p-2">Rating</th> 
-                            <th class="p-2">Body</th>
-                            <th class="p-2">Create Time</th>
-                            <th class="p-2">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="review-body">
-        
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto mt-6">
+                    <table class="w-full min-w-max text-sm text-left text-gray-800 bg-white">
+                        <thead class="bg-gray-400 text-xs uppercase text-black">
+                            <tr>
+                                <th class="py-3">Order ID</th>
+                                <th class="p-3">Rating</th>
+                                <th class="p-3">Body</th>
+                                <th class="p-3">Create Time</th>
+                                <th class="p-3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="review-body" class="divide-y divide-gray-100">
+                            
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </main>
     </div>
@@ -124,4 +128,5 @@
     <script src="./js/admin_review.js"></script>
 
 </body>
+
 </html>

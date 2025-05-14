@@ -15,15 +15,15 @@ const adminHotel = () => {
         row.classList.add("border-b");
 
         row.innerHTML = `
-                <td class="p-2">${hotel.id}</td>
-                <td class="p-2">${hotel.hotel_name}</td>
-                <td class="p-2">${hotel.description}</td>
-                <td class="p-2">${hotel.address}</td>
-                <td class="p-2">${hotel.district_name}</td>
-                <td class="p-2">${hotel.price_per_night}</td>
-                <td class="p-2"><img src="${hotel.image_url}" alt="${hotel.name}" class="w-16 h-16 object-cover"></td>
-                <td class="p-2">${hotel.available_room}</td>
-                <td class="p-2">
+                <td class="">${hotel.id}</td>
+                <td class="">${hotel.hotel_name}</td>
+                <td class="">${hotel.description}</td>
+                <td class="">${hotel.address}</td>
+                <td class="">${hotel.district_name}</td>
+                <td class="">${hotel.price_per_night}</td>
+                <td class=""><img src="${hotel.image_url}" alt="${hotel.name}" class="w-16 h-16 object-cover"></td>
+                <td class="">${hotel.available_room}</td>
+                <td class="">
                     <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${hotel.id}">Delete</button>
                 </td>
             `;

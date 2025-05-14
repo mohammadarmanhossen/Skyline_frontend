@@ -17,9 +17,9 @@ const adminContact= () => {
             row.classList.add('border-b');
 
             row.innerHTML = `
-                <td class="p-2">${contact.id}</td>
-                <td class="p-2">${contact.subject}</td>
-                <td class="p-2">${contact.message}</td>
+                <td class="">${contact.id}</td>
+                <td class="">${contact.subject}</td>
+                <td class="">${contact.message}</td>
                 <td class="p-2">
                     <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${contact.id}">Delete</button>
                 </td>
