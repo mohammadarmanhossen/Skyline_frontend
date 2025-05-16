@@ -40,6 +40,14 @@ const displayHotels = (hotelsData) => {
     const container = document.getElementById('hotels');
     if (!container) return;
 
+     const getShortDescription = (text, wordLimit = 6) => {
+        const words = text.split(' ');
+        return words.slice(0, wordLimit).join(' ') + (words.length > wordLimit ? '...' : '');
+    };
+       const getShortName = (text, wordLimit = 3) => {
+        const words = text.split(' ');
+        return words.slice(0, wordLimit).join(' ') + (words.length > wordLimit ? '...' : '');
+    };
 
     if (hotelsData.length === 0) {
         container.innerHTML = '<p class="text-center text-gray-500">No hotels available.</p>';
@@ -50,8 +58,8 @@ const displayHotels = (hotelsData) => {
         <div class="max-w-sm bg-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden m-4">
             <img class="w-full h-56 object-cover" src="${hotel.image_url}" alt="${hotel.hotel_name}">
             <div class="px-6 py-4">
-                <h5 class="text-2xl font-semibold text-gray-700 mb-1">${hotel.hotel_name}</h5>
-                <p class="text-gray-700 text-sm mb-3">${hotel.description}</p>
+                <h5 class="text-2xl font-semibold text-gray-700 mb-1">${getShortName(hotel.hotel_name)}</h5>
+                <p class="text-gray-700 text-sm mb-3">${getShortDescription(hotel.description)}</p>
                 <p class="text-gray-700 text-sm mb-3">Room : ${hotel.available_room}</p>
                <p class="text-gray-700 text-sm mb-3">District : ${hotel.district_name}</p>
               
