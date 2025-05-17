@@ -13,11 +13,11 @@ const navbar = () => {
               <button class="dropdownButton flex items-center gap-2 bg-gray-100 text-black px-4 py-2 font-bold hover:bg-gray-300 rounded-md shadow"
                   <span>Account</span>
               </button>
-              <div class="dropdownMenu hidden absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <a href="/profile.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 font-bold hover:text-blue-600 transition">Profile</a>
+              <div class="dropdownMenu hidden absolute right-0 mt-2 w-40 bg-white border text-center  border-gray-200 rounded-lg shadow-lg z-50 p-5">
+                  <a href="/profile.html" class="block px-4 py-2 rounded-2xl text-gray-700 hover:bg-gray-100 font-bold hover:text-amber-800 transition">Profile</a>
         
                   <form onsubmit="handleLogout(event)">
-                      <button type="submit" class="w-full text-left px-4 py-2 text-gray-700 font-bold hover:bg-gray-100 hover:text-red-600 transition">Logout</button>
+                      <button type="submit" class="w-full text-center px-4 py-2 rounded-2xl text-gray-700 font-bold hover:bg-gray-100 hover:text-red-600 transition">Logout</button>
                   </form>
               </div>
           </div>

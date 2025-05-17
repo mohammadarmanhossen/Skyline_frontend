@@ -11,12 +11,12 @@ hotelId
         document.getElementById("hotel-info").innerHTML = `
 
 
-      <section class="bg-white py-16 px-4 md:px-12 lg:px-24">
+      <section class="bg-white py-16  lg:px-12">
        <div class="max-w-12xl mx-auto space-y-16">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-xl bg-gray-50 shadow-lg">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 rounded-xl bg-gray-50 shadow-lg">
       
-      <!-- Hotel Image -->
+
       <div class="w-full h-64 md:h-full">
         <img src="${hotel.image_url}" alt="${hotel.hotel_name}"
           class="w-full h-full object-cover rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
@@ -41,7 +41,7 @@ hotelId
     </div>
 
 
-    <div class="space-y-12">
+    <div class="space-y-12 border p-4 rounded-xl">
       <div>
         <h2 class="text-4xl font-bold text-gray-800 mb-4">🏨 Overview</h2>
         <p class="text-gray-700 text-lg leading-relaxed">

@@ -16,35 +16,64 @@ const userProfile = () => {
 
 
 
+      <div class="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+  <div class="bg-white w-full max-w-4xl rounded-3xl shadow-xl overflow-hidden">
 
 
-<div class="min-h-screen bg-gradient-to-br from-gray-100 flex items-center justify-center p-6">
-  <div class="bg-white rounded-2xl shadow-xl w-full max-w-3xl p-8">
-    
-    <!-- Avatar & User Info -->
-    <div class="flex flex-col items-center gap-6">
-      
-      <!-- Avatar -->
-      <img src="/image/man_3.jpg" alt="Profile Picture"
-        class="w-32 h-32 border-4 border-gray-600 shadow-md rounded-full transition-transform duration-300 hover:scale-105">
+    <div class="bg-gray-400 h-40 relative">
+      <div class="absolute left-1/2 transform -translate-x-1/2 top-20">
+        <img src="/image/man_3.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-white shadow-lg">
+      </div>
+    </div>
 
-      <!-- User Info -->
-      <div class="text-center space-y-2">
-        <p class="text-xl text-gray-00">Usermane : ${currentUser.username}</p>
-        <p class="text-lg text-gray-700">Full Name: ${currentUser.first_name} ${currentUser.last_name}</p>
-        <p class="text-lg text-gray-600">Email: ${currentUser.email}</p>
+
+    <div class="pt-24 pb-10 px-6 md:px-10 text-center">
+      <h2 class="text-3xl font-bold text-gray-800" id="userFullName">${currentUser.first_name}${currentUser.last_name}</h2>
+      <p class=" text-gray-500" id="userEmail">${currentUser.email}</p>
+
+      <div class="mt-2 text-gray-600 text-sm" id="userAddress">
+        📍 Dhaka, Bangladesh
       </div>
 
-      <!-- Edit Button -->
-      <div class="mt-4">
-        <a href="./change_password.html"
-          class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg shadow-sm transition">
+   
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div>
+          <p class="text-xl font-bold text-gray-600">10</p>
+          <p class="text-sm text-gray-500">Total Bookings</p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-gray-600">5</p>
+          <p class="text-sm text-gray-500">Upcoming Trips</p>
+        </div>
+        <div>
+          <p class="text-xl font-bold text-gary-600">৳50,500</p>
+          <p class="text-sm text-gray-500">Total Spent</p>
+        </div>
+      </div>
+
+ 
+      <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+        <a href="/booked_hotel.html"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
+         Booking History
+        </a>
+        <a href="/Change_password.html"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
           Edit Profile
+        </a>
+        <a href="/contact.html"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
+          Contact Me
         </a>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
 
 
         `;

@@ -52,15 +52,17 @@
 
     <main>
 
-        <div class="hero-section h-[50vh] relative pt-20">
-            <img src="./image/Best_hotel.avif" alt="Banner"
-                class="absolute inset-0 w-full h-full object-cover z-0 brightness-60">
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 pt-20">
+
+        <div class="hero-section relative h-[75vh]">
+            <img src="./image/Hotel_6.avif" alt="Banner"
+                class="absolute inset-0 w-full h-full object-cover object-center brightness-60 z-0" />
+
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4">
                 <div
                     class="bg-white backdrop-blur-md p-5 rounded-xl shadow-lg max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-4">
                     <select id="district-select"
                         class="h-12 px-4 rounded-lg border w-full md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                        <option value="all">🌍 All Districts</option>
+                        <option value="all">All Districts</option>
                     </select>
 
                     <input type="text" id="search" placeholder="Search..."
@@ -77,11 +79,12 @@
 
 
 
+
         <div class="main-container container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
 
             <section class="selection 1">
                 <div class="py-5">
-                    <h1 class=" text-3xl md:text-4xl font-bold">Offers to inspire you</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold">Offers to inspire you</h1>
                 </div>
                 <div class="product-carts grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 pt-10">
                     <div
@@ -89,7 +92,7 @@
                         <img src="/image/box/offer-box-1.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
                         <div class="flex flex-col items-center text-center p-6 space-y-4">
-                            <h2 class="text-2xl font-bold">Family Escape</h2>
+                            <h2 class="text-2xl font-semibold">Family Escape</h2>
                             <p class="text-gray-600">Children eat free, exciting fun activities.</p>
                             <p class=" text-amber-700">Read More</p>
                         </div>
@@ -101,17 +104,18 @@
                         <img src="/image/box/offer-box-2.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
                         <div class="flex flex-col items-center text-center p-6 space-y-4">
-                            <h2 class="text-2xl font-bold">Business Trip</h2>
+                            <h2 class="text-2xl font-semibold">Business Trip</h2>
                             <p class="text-gray-600">Up to 20% off food and services</p>
                             <p class=" text-amber-700">Read More</p>
                         </div>
                     </div>
 
-                    <div class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
+                    <div
+                        class="product-cart flex flex-col bg-white rounded-lg shadow-lg p-6 hover:scale-105 transition-transform">
                         <img src="/image/box/offer-box-3.jpg" alt="Product 1"
                             class="w-full h-64 object-cover rounded-lg mb-4">
                         <div class="flex flex-col items-center text-center p-6 space-y-4">
-                            <h2 class="text-2xl font-bold">Romance</h2>
+                            <h2 class="text-2xl font-semibold">Romance</h2>
                             <p class="text-gray-600">Discount room rates, reward points.</p>
                             <p class=" text-amber-700">Read More</p>
                         </div>
@@ -142,10 +146,10 @@
                 <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8 md:py-5">
 
                     <div
-                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        class="bg-white  border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
                         <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
                             src="./image/arman.jpg" alt="Mohammad Arman">
-                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Mohammad Arman</h2>
+                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 text-center">Mohammad Arman</h2>
                         <p class="mt-2 text-center text-gray-500">Shop anytime, anywhere with an intuitive interface.
                         </p>
                         <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
@@ -154,20 +158,20 @@
                     </div>
 
                     <div
-                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        class="bg-white  border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
                         <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
                             src="./image/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="Lemon Hossen">
-                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Lemon Hossen</h2>
+                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 text-center">Lemon Hossen</h2>
                         <p class="mt-2 text-center text-gray-500">This product is good and delivery was fast.</p>
                         <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                         </div>
                     </div>
                     <div
-                        class="bg-white border border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
+                        class="bg-white  border-gray-200 rounded-3xl shadow-lg p-6 transition-transform transform hover:scale-105 duration-300">
                         <img class="h-28 w-28 mx-auto rounded-full object-cover ring-4 ring-blue-100"
                             src="./image/man_3.jpg" alt="Sazib Hossain">
-                        <h2 class="mt-4 text-2xl font-bold text-gray-800 text-center">Sazib Hossain</h2>
+                        <h2 class="mt-4 text-2xl font-semibold text-gray-800 text-center">Sazib Hossain</h2>
                         <p class="mt-2 text-center text-gray-500">Low cost and good product service.</p>
                         <div class="mt-4 flex justify-center space-x-1 text-yellow-400 text-xl">
                             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -234,23 +238,29 @@
                 <div class="service-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-8">
 
                     <div
-                        class="container-1 flex flex-col text-center border-2 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        class="container-1 flex flex-col text-center  border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
                         <img class="h-10 mx-auto" src="./image/linkdin.svg" alt="Mobile Shopping">
-                         <a href="https://www.linkedin.com/feed/"><h1 class="text-2xl font-semibold mt-3 text-gray-800">Linkedin</h1></a>
+                        <a href="https://www.linkedin.com/feed/">
+                            <h1 class="text-2xl font-semibold mt-3 text-gray-800">Linkedin</h1>
+                        </a>
                         <p class="mt-2 text-gray-600">Shop anytime,This is my linkedln account</p>
                     </div>
                     <div
-                        class="container-1 flex flex-col text-center border-2 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        class="container-1 flex flex-col text-center  border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
                         <img class="h-10 mx-auto" src="./image/images.png" alt="Mobile Shopping">
-                        <a href="https://www.facebook.com/mbarmanhossen123"><h1 class="text-2xl font-semibold mt-3 text-gray-800">Facebook</h1></a>
+                        <a href="https://www.facebook.com/mbarmanhossen123">
+                            <h1 class="text-2xl font-semibold mt-3 text-gray-800">Facebook</h1>
+                        </a>
                         <p class="mt-2  text-gray-600">Shop anytime, This is my facebook account</p>
                     </div>
                     <div
-                        class="container-1 flex flex-col text-center border-2 border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
+                        class="container-1 flex flex-col text-center  border-gray-300 rounded-2xl shadow-xl hover:scale-105 transition-transform p-6">
                         <img class="h-10 mx-auto"
                             src="./image/instagram-vector-logo-icon-social-media-logotype-black-white_901408-391.avif"
                             alt="Mobile Shopping">
-                             <a href="https://www.instagram.com/"><h1 class="text-2xl font-semibold mt-3 text-gray-800">Instagram</h1></a>
+                        <a href="https://www.instagram.com/">
+                            <h1 class="text-2xl font-semibold mt-3 text-gray-800">Instagram</h1>
+                        </a>
                         <p class="mt-2  text-gray-600">Shop anytime, This is my instagram account</p>
                     </div>
                 </div>
@@ -288,77 +298,80 @@
 
 
 
-<footer class="bg-gray-900 text-white px-6 py-10 pt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="bg-gray-900 text-white px-6 py-10 pt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
 
             <div>
-            <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
-            <p class="text-sm text-gray-400">
-                Quick service <br>
-                Delivery 1-5 day <br>
-                Office Dhaka 55 Dilkusha C/A, Motijheel,
-            </p>
-            <div class="flex space-x-4 mt-4">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
-                </a>
+                <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
+                <p class="text-sm text-gray-400">
+                    Quick service <br>
+                    Delivery 1-5 day <br>
+                    Office Dhaka 55 Dilkusha C/A, Motijheel,
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                </div>
+
             </div>
-        
-        </div>
- 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-gray-300">
-                <li><a href="#" class="hover:text-white">› Home</a></li>
-                <li><a href="#" class="hover:text-white">› About</a></li>
-                <li><a href="#" class="hover:text-white">› Services</a></li>
-                <li><a href="#" class="hover:text-white">› Products</a></li>
-                <li><a href="#" class="hover:text-white">› Media & News</a></li>
-                <li><a href="#" class="hover:text-white">› Contact</a></li>
-                <li><a href="#" class="hover:text-white">› Terms & Conditions</a></li>
-                <li><a href="#" class="hover:text-white">› Privacy Policy</a></li>
-                <li><a href="#" class="hover:text-white">› FAQ</a></li>
-            </ul>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-white">› Home</a></li>
+                    <li><a href="#" class="hover:text-white">› About</a></li>
+                    <li><a href="#" class="hover:text-white">› Services</a></li>
+                    <li><a href="#" class="hover:text-white">› Products</a></li>
+                    <li><a href="#" class="hover:text-white">› Media & News</a></li>
+                    <li><a href="#" class="hover:text-white">› Contact</a></li>
+                    <li><a href="#" class="hover:text-white">› Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white">› Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">› FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Office</h3>
+                <p class="text-sm text-gray-400">
+                    Level -5, NIK Tower, <br>
+                    55 Dilkusha C/A, Motijheel, <br>
+                    Dhaka-1000, Bangladesh
+                </p>
+                <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai"
+                        class="hover:underline">support@skylinehotel.ai</a></p>
+                <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88)
+                        01765034196</a></p>
+            </div>
+
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on
+                    products.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your email address" required
+                        class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
+                    <button type="submit"
+                        class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
+                </form>
+            </div>
         </div>
 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Office</h3>
-            <p class="text-sm text-gray-400">
-                Level -5, NIK Tower, <br>
-                55 Dilkusha C/A, Motijheel, <br>
-                Dhaka-1000, Bangladesh
-            </p>
-            <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai" class="hover:underline">support@skylinehotel.ai</a></p>
-            <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88) 01765034196</a></p>
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+            © 2025 Skyline Hotel Booking Ltd. All rights reserved.
         </div>
-
-
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
-            <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on products.</p>
-            <form class="flex flex-col space-y-3">
-                <input type="email" placeholder="Your email address" required
-                    class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
-                <button type="submit"
-                    class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        © 2025 Skyline Hotel Booking Ltd. All rights reserved.
-    </div>
-</footer>
+    </footer>
 
 
     <script src="./js/index.js"></script>

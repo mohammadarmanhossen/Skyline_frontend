@@ -52,59 +52,47 @@
 
     </nav>
 
-    <main class="pt-40 px-4 md:px-0">
-        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8 space-y-6 pt-40 pb-40">
-            <div>
-                <div class="text-end ">
-                    <button onclick="downloadPDF()"
-                        class="bg-gray-600 hover:bg-blue-700 text-white py-2 pt-3 px-6 rounded-xl shadow">
-                         Download PDF
-                    </button>
+
+    <main class="pt-32 px-4 md:px-0 bg-gray-50 min-h-screen">
+        <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl p-10 space-y-10">
+
+
+            <div class="text-end">
+                <button onclick="downloadPDF()"
+                    class="bg-gradient-to-r from-gray-800 to-gray-600 hover:from-blue-800 hover:to-blue-600 text-white py-2 px-6 rounded-xl shadow transition">
+                    📥 Download PDF
+                </button>
+            </div>
+
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">🧾 Booking Details</h2>
+                <div class="space-y-3  text-gray-700">
+                    <p><span class="font-semibold">🏨 Hotel : </span> <span id="bookedHotel">Loading...</span></p>
+                    <p><span class="font-semibold">🏨 Room : </span> <span id="bookedRoom">Loading...</span></p>
+                    <p><span class="font-semibold">💰 Total Amount:</span> <span id="totalAmount">Loading...</span></p>
                 </div>
-             
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">🧾 Booking Details</h2>
-            
+            </section>
 
-                <p id="bookedHotel" class="text-gray-700 text-lg">
-                    <span class="font-semibold">Hotel Name:</span> Loading...
-                </p>
-                <p id="totalAmount" class="text-gray-700 text-lg">
-                    <span class="font-semibold">Total Amount:</span> Loading...
-                </p>
-            </div>
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">👤 Customer Info</h3>
+                <div class="space-y-2 text-gray-700 text-base">
+                    <p><span class="font-semibold">Name:</span> <span id="userName">Loading...</span></p>
+                    <p><span class="font-semibold">Email:</span> <span id="userEmail">Loading...</span></p>
+                    <p><span class="font-semibold">Address:</span> <span id="userAddress">Loading...</span></p>
+                    <p><span class="font-semibold">Zip:</span> <span id="userZip">Loading...</span></p>
+                </div>
+            </section>
 
-            <div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">👤 Customer Info</h3>
-                <p id="userName" class="text-gray-700 text-base">
-                    <span class="font-semibold">Name:</span> Loading...
-                </p>
-                <p id="userEmail" class="text-gray-700 text-base">
-                    <span class="font-semibold">Email:</span> Loading...
-                </p>
-                <p id="userAddress" class="text-gray-700 text-base">
-                    <span class="font-semibold">Address:</span> Loading...
-                </p>
-                <p id="userZip" class="text-gray-700 text-base">
-                    <span class="font-semibold">Zip:</span> Loading...
-                </p>
-            </div>
 
-            <div>
-                <h3 class="text-xl font-semibold text-gray-800 mb-2 border-b pb-1">🧾 Payment</h3>
-                <p id="courierService" class="text-gray-700 text-base">
-                    <span class="font-semibold">Courier Service : Pathao Courier</span>
-                </p>
-                <p id="paymentStatus" class="text-gray-700 text-base">
-                    <span class="font-semibold">Status : Complated</span>
-                </p>
-                <p id="deliveryDate" class="text-gray-700 text-base">
-                    <span class="font-semibold">Expected Delivery : 3-7 Business Days</span>
-                </p>
-                <p id="paymentMethod" class="text-gray-700 text-base">
-                    <span class="font-semibold">Payment Method : SSLCOMMERZ</span>
-                </p>
-            </div>
-
+            <section>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">💳 Payment Information</h3>
+                <div class="space-y-2 text-gray-700 text-base">
+                    <p><span class="font-semibold">🚚 Courier Service:</span> Pathao Courier</p>
+                    <p><span class="font-semibold">📦 Status:</span> Completed</p>
+                    <p><span class="font-semibold">🗓️ Delivery:</span> 3-7 Business Days</p>
+                    <p><span class="font-semibold">💳 Payment Method:</span> SSLCOMMERZ</p>
+                </div>
+            </section>
         </div>
     </main>
 

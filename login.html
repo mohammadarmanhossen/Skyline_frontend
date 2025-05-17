@@ -49,60 +49,70 @@
 
     </nav>
 
-    <main>
 
 
-        <div class="flex items-center justify-center min-h-screen bg-gray-100 mt-16">
-
-            <div class="bg-white p-8 rounded-lg shadow-lg w-96">
-                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login Page</h2>
 
 
-                <form action="" onsubmit="handleLogin(event)">
+    <main class="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center px-4">
+        <div class="bg-white/40 backdrop-blur-md border border-gray-300 shadow-xl rounded-2xl p-8 w-full max-w-md">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6 p-5">Login Account</h2>
 
-                    <div class="mb-4">
-                        <label for="username" class="block text-gray-700 font-medium">Username</label>
-                        <input type="username" id="username"
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your username" required>
+            <form onsubmit="handleLogin(event)" class="space-y-5">
+
+                <div>
+                    <label for="username" class="block text-sm font-semibold text-gray-700">Username</label>
+                    <input type="text" id="username" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400"
+                        placeholder="Enter your username" />
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
+                    <input type="password" id="password" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder-gray-400"
+                        placeholder="Enter your password" />
+                </div>
+
+                <div class="flex justify-between items-center text-sm">
+                    <label class="flex items-center gap-2 text-gray-600">
+                        <input type="checkbox" class="accent-blue-500" />
+                        Remember me
+                    </label>
+                    <a href="#" class="text-blue-500 hover:underline">Forgot password?</a>
+                </div>
+
+
+                <button type="submit"
+                    class="w-full bg-gray-600  text-white py-2 rounded-lg  hover:to-gray-700 transition duration-300">
+                    Login
+                </button>
+
+
+                <div class="bg-white/60 p-4 rounded-xl text-sm text-gray-800 shadow-inner">
+                    <p class="font-semibold mb-2 text-center text-gray-700">Test Accounts</p>
+                    <div class="justify-between gap-4 text-xs">
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-semibold text-gray-700">Admin</h3>
+                            <p><b>Username : </b> admin</p>
+                            <p><b>Password : </b> admin</p>
+                        </div>
+                        <div class="space-y-1">
+                            <h3 class="text-xl font-semibold text-gray-700">User</h3>
+                            <p><b>Username : </b> arman</p>
+                            <p><b>Password : </b> arman</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="mb-4">
-                        <label for="password" class="block text-gray-700 font-medium">Password</label>
-                        <input type="password" id="password"
-                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-                            placeholder="Enter your password" required>
-                    </div>
-
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="flex items-center">
-                            <input type="checkbox" class="mr-2">
-                            <span class="text-gray-600 text-sm">Remember me</span>
-                        </label>
-                        <a href="#" class="text-blue-500 text-sm hover:underline">Forgot password?</a>
-                    </div>
-                    <div class="text-start text-gray-600 text-sm">
-                        <h1 class="text-xl front-bold">Admin</h1>
-                        <h1>Username : admin</h1>
-                        <h1>Password : admin</h1>
-                        <h1 class="text-xl front-bold">User</h1>
-                        <h1>Username : arman</h1>
-                        <h1>Password : arman</h1>
-                    </div>
-                    <div class="text-center pt-5">
-                        <input type="submit"
-                            class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-900 transition"
-                            value="Login" />
-                    </div>
-                </form>
-
-                <p class="text-center text-gray-600 text-sm mt-4">
-                    Don't have an account? <a href="register.html" class="text-blue-500 hover:underline">Sign up</a>
+                <p class="text-center text-gray-600 text-sm pt-4">
+                    Don't have an account?
+                    <a href="register.html" class="text-blue-500 font-medium hover:underline">Sign up</a>
                 </p>
-            </div>
-        </div>
 
+            </form>
+        </div>
     </main>
+
 
 
 

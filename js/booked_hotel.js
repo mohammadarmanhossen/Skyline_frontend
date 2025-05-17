@@ -62,7 +62,7 @@ fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
       }
 
       row.innerHTML = `
-            <td class="border px-4 py-2 text-center font-medium">${item.id}</td>
+            <td class="border px-4 py-2 text-center">${item.id}</td>
             <td class="border px-4 py-2 text-center">${item.hotel_name}</td>
             <td class="border px-4 py-2 text-center">${item.room}</td>
             <td class="border px-4 py-2 text-center">${item.in_date}</td>
