@@ -14,7 +14,7 @@ const adminReview = () => {
         
         data.forEach(review => {
             const row = document.createElement('tr');
-            row.classList.add('border-b');
+            row.classList.add();
 
             row.innerHTML = `
                 <td class="">${review.id}</td>
@@ -23,7 +23,7 @@ const adminReview = () => {
                 <td class="">${review.body}</td>
                 <td class="">${review.created}</td>
                 <td class="p-2">
-                    <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${review.id}">Delete</button>
+                    <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${review.id}">Delete</button>
                 </td>
             `;
             

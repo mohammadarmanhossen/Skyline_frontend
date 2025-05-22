@@ -14,7 +14,7 @@ const adminOrder= () => {
         
         data.forEach(order => {
             const row = document.createElement('tr');
-            row.classList.add('border-b');
+            row.classList.add();
 
             row.innerHTML = `
                 <td class="">${order.id}</td>
@@ -23,7 +23,7 @@ const adminOrder= () => {
                 <td class="">${order.address}</td>
                 <td class="">${order.zip_code}</td>
                 <td class="p-2">
-                    <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${order.id}">Delete</button>
+                    <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${order.id}">Delete</button>
                 </td>
             `;
             

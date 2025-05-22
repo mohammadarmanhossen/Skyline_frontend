@@ -12,7 +12,7 @@ const adminHotel = () => {
 
       data.forEach((hotel) => {
         const row = document.createElement("tr");
-        row.classList.add("border-b");
+        row.classList.add();
 
         row.innerHTML = `
                 <td class="">${hotel.id}</td>
@@ -24,7 +24,7 @@ const adminHotel = () => {
                 <td class=""><img src="${hotel.image_url}" alt="${hotel.name}" class="w-16 h-16 object-cover"></td>
                 <td class="">${hotel.available_room}</td>
                 <td class="">
-                    <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-id="${hotel.id}">Delete</button>
+                    <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${hotel.id}">Delete</button>
                 </td>
             `;
 

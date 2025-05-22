@@ -15,7 +15,7 @@ const adminUser = () => {
 
         data.forEach(user => {
             const row = document.createElement('tr');
-            row.classList.add('border-b');
+            row.classList.add();
 
             row.innerHTML = `
                 <td class="">${user.id}</td>
@@ -24,7 +24,7 @@ const adminUser = () => {
                 <td class="">${user.first_name}</td>
                 <td class="">${user.last_name}</td>
                 <td class="p-2">
-                    <button class="bg-red-500 p-1 border-1 rounded-md delete-button" data-user-id="${user.id}">Delete</button>
+                    <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-user-id="${user.id}">Delete</button>
                 </td>
             `;
 
