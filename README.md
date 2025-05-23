@@ -2,6 +2,7 @@
 
 
 [SKYLINE](https://skyline-frontend.netlify.app/)  is a full-featured hotel booking system developed using Django REST Framework. It offers a seamless experience for users to search for hotels, make bookings, complete secure payments, and share reviews — all in one platform.
+
 The key features of Skyline include:
 User Authentication & Authorization
 Secure registration, login, email verification, and role-based access control ensure only authorized access.
@@ -16,12 +17,6 @@ Users can leave honest reviews and rate hotels based on their experience, helpin
 User profile password forget system.
 Skyline is designed to be scalable, user-friendly, and secure — making it an ideal solution for real-world hotel booking needs.
 
-
-
-- **Skyline Frontend Live Site:** [Skyline Frontend](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Live Site:** [Skyline Backend](https://skyline-backend.vercel.app/)
-- **Skyline Frontend GitHub:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
-- **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 
 ### User Access Information
 - **Admin:**
@@ -57,8 +52,15 @@ Password: arman
 
 ---
 
+### Project Live Access Information
+- **Skyline Frontend Live Site:** [Skyline-Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Server Site:** [Skyline-Backend](https://skyline-backend.vercel.app/)
+---
 
-- **Skyline Frontend Live Site:** [Skyline Frontend](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Server Site:** [Skyline Backend](https://skyline-backend.vercel.app/)
+### Project GitHub Access Information
+- **Skyline Frontend GitHub:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
+- **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
+---
+
 
 
