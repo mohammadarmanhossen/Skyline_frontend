@@ -17,6 +17,7 @@ Users can leave honest reviews and rate hotels based on their experience, helpin
 User profile password forget system.
 Skyline is designed to be scalable, user-friendly, and secure — making it an ideal solution for real-world hotel booking needs.
 
+---
 
 ### User Access Information
 - **Admin:**
@@ -53,13 +54,13 @@ Password: arman
 ---
 
 ### Project Live Access Information
-- **Skyline Frontend Live Site:** [Skyline-Frontend](https://skyline-frontend.netlify.app/)
-- **Skyline Backend Server Site:** [Skyline-Backend](https://skyline-backend.vercel.app/)
+- **Skyline Frontend Netlify Live Site:** [Skyline-Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Backend Vercel Server Site:** [Skyline-Backend](https://skyline-backend.vercel.app/)
 ---
 
 ### Project GitHub Access Information
-- **Skyline Frontend GitHub:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
-- **Skyline Backend GitHub:** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
+- **Skyline GitHub Frontend:** [github.com/mohammadarmanhossen/Skyline_frontend](https://github.com/mohammadarmanhossen/Skyline_frontend)
+- **Skyline GitHub Backend :** [github.com/mohammadarmanhossen/Skyline_backend](https://github.com/mohammadarmanhossen/Skyline_backend)
 ---
 
 
