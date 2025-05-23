@@ -7,6 +7,7 @@ const adminReview = () => {
     })
     .then(response => response.json())
     .then(data => {
+        data.sort((a, b) => b.id - a.id);
         console.log('Review Data:', data);
 
         const reviewBody = document.getElementById('review-body');

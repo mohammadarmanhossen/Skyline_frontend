@@ -7,6 +7,7 @@ const adminHotel = () => {
   })
     .then((response) => response.json())
     .then((data) => {
+        data.sort((a, b) => b.id - a.id);
       const hotelBody = document.getElementById("hotel-body");
       hotelBody.innerHTML = "";
 

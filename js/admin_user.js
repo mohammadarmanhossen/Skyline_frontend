@@ -8,6 +8,7 @@ const adminUser = () => {
     })
     .then(response => response.json())
     .then(data => {
+        data.sort((a, b) => b.id - a.id);
         console.log('User Data:', data);
 
         const userBody = document.getElementById('user-body');

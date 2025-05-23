@@ -1,6 +1,7 @@
 fetch("https://skyline-backend.vercel.app/bookeds/")
   .then((response) => response.json())
   .then((data) => {
+     data.sort((a, b) => b.id - a.id);
     const tableBody = document.getElementById("bookedTableBody");
 
     data.forEach((item) => {

@@ -7,6 +7,8 @@ const adminOrder= () => {
     })
     .then(response => response.json())
     .then(data => {
+        
+        data.sort((a, b) => b.id - a.id);
         console.log('Order Data:', data);
 
         const orderBody = document.getElementById('order-body');
