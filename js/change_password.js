@@ -23,7 +23,7 @@
       return;
     }
 
-    fetch(`https://skyline-backend-krnt.onrender.com/client/change_password/${user_id}/`, {
+    fetch(`https://skyline-backend.vercel.app/client/change_password/${user_id}/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

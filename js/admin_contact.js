@@ -1,5 +1,5 @@
 const adminContact= () => {
-    fetch('https://skyline-backend-krnt.onrender.com/client/contact/', {
+    fetch('https://skyline-backend.vercel.app/client/contact/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const adminContact= () => {
             button.addEventListener('click', (event) => {
                 const contactId = event.target.getAttribute('data-id');
 
-                fetch(`https://skyline-backend-krnt.onrender.com/client/contact/${contactId}/`, {
+                fetch(`https://skyline-backend.vercel.app/client/contact/${contactId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

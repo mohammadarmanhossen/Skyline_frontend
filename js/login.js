@@ -13,8 +13,7 @@ const handleLogin = (event) => {
       password: password
     };
 
-    // Admin login request
-    fetch("https://skyline-backend-krnt.onrender.com/client/admin/login/", {
+    fetch("https://skyline-backend.vercel.app/client/admin/login/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -45,7 +44,7 @@ const handleLogin = (event) => {
           password: password
         };
 
-        fetch("https://skyline-backend-krnt.onrender.com/client/login/", {
+        fetch("https://skyline-backend.vercel.app/client/login/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -115,7 +114,7 @@ const handleLogout = (event) => {
   console.log("Logging out...");
   const token = localStorage.getItem("token");
   console.log(token);
-  fetch("https://skyline-backend-krnt.onrender.com//client/logout/", {
+  fetch("https://skyline-backend.vercel.app/client/logout/", {
     method: "GET",
     headers: {
       Authorization: `Token ${token}`,
@@ -145,7 +144,7 @@ const adminLogout = (event) => {
   console.log("Logging out...");
   const token = localStorage.getItem("token");
   console.log(token);
-  fetch("https://skyline-backend-krnt.onrender.com/client/admin/logout/", {
+  fetch("https://skyline-backend.vercel.app/client/admin/logout/", {
     method: "GET",
     headers: {
       Authorization: `Token ${token}`,

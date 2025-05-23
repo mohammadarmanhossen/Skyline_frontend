@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const hotelId = params.get("id");
 
 hotelId
-  ? fetch(`https://skyline-backend-krnt.onrender.com/hotels/${hotelId}/`)
+  ? fetch(`https://skyline-backend.vercel.app/hotels/${hotelId}/`)
       .then((res) => {
         if (!res.ok) throw new Error("Hotel not found");
         return res.json();
@@ -137,7 +137,7 @@ hotelId
 
             console.log(bookingData);
 
-            fetch("https://skyline-backend-krnt.onrender.com/bookeds/", {
+            fetch("https://skyline-backend.vercel.app/bookeds/", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -186,7 +186,7 @@ const review = (event) => {
 
   console.log(data);
 
-  fetch("https://skyline-backend-krnt.onrender.com/reviews/", {
+  fetch("https://skyline-backend.vercel.app/reviews/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

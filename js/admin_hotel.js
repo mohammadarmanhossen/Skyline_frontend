@@ -1,5 +1,5 @@
 const adminHotel = () => {
-  fetch("https://skyline-backend-krnt.onrender.com/hotels/", {
+  fetch("https://skyline-backend.vercel.app/hotels/", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const adminHotel = () => {
 };
 
 function deleteHotel(hotelId) {
-  fetch(`https://skyline-backend-krnt.onrender.com/hotels/${hotelId}/`, {
+  fetch(`https://skyline-backend.vercel.app/hotels/${hotelId}/`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -90,7 +90,7 @@ document.getElementById("hotelForm").addEventListener("submit", (e) => {
   
     console.log(data);
   
-    fetch("https://skyline-backend-krnt.onrender.com/hotels/", {
+    fetch("https://skyline-backend.vercel.app/hotels/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -22,7 +22,7 @@ const handleRegistration = (event) => {
         return;
     }
   
-    fetch("https://skyline-backend-krnt.onrender.com/client/register/", {
+    fetch("https://skyline-backend.vercel.app/client/register/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(info),

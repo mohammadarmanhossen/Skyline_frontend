@@ -1,6 +1,6 @@
 
 const adminUser = () => {
-    fetch('https://skyline-backend-krnt.onrender.com/client/users/', {
+    fetch('https://skyline-backend.vercel.app/client/users/', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const adminUser = () => {
 };
 
 const deleteUser = (userId) => {
-    fetch(`https://skyline-backend-krnt.onrender.com/account/user/${userId}/`, {
+    fetch(`https://skyline-backend.vercel.app/account/user/${userId}/`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

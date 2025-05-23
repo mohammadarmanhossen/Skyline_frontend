@@ -3,7 +3,7 @@ const userProfile = () => {
   const user_id = localStorage.getItem("user_id");
   console.log("Logged-in User ID:", user_id);
 
-  fetch("https://skyline-backend-krnt.onrender.com/client/users/")
+  fetch("https://skyline-backend.vercel.app/client/users/")
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -69,12 +69,6 @@ const userProfile = () => {
     </div>
   </div>
 </div>
-
-
-
-
-
-
 
         `;
 

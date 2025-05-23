@@ -12,7 +12,7 @@
       total_amount: document.getElementById("total_amount").value,
     };
 
-    fetch("https://skyline-backend-krnt.onrender.com/bookeds/", {
+    fetch("https://skyline-backend.vercel.app/bookeds/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -34,7 +34,7 @@
 
 
   const loadHotels = () => {
-    fetch("https://skyline-backend-krnt.onrender.com/hotels/")
+    fetch("https://skyline-backend.vercel.app/hotels/")
       .then((res) => res.json())
       .then((hotels) => {
         const select = document.getElementById("hotel_name");

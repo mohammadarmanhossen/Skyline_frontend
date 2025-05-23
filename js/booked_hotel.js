@@ -1,4 +1,4 @@
-fetch("https://skyline-backend-krnt.onrender.com/bookeds/")
+fetch("https://skyline-backend.vercel.app/bookeds/")
   .then((response) => response.json())
   .then((data) => {
     const tableBody = document.getElementById("bookedTableBody");
@@ -80,7 +80,7 @@ document.addEventListener("click", (event) => {
   if (event.target.classList.contains("delete-btn")) {
     const bookedId = event.target.getAttribute("data-id");
 
-    fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${bookedId}/`, {
+    fetch(`https://skyline-backend.vercel.app/bookeds/${bookedId}/`, {
       method: "DELETE",
     })
       .then((response) => {
@@ -104,7 +104,7 @@ const hotel_delete = () => {
       const row = event.target.closest("tr");
       const id = row.cells[0].innerText;
 
-      fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${id}/`, {
+      fetch(`https://skyline-backend.vercel.app/bookeds/${id}/`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

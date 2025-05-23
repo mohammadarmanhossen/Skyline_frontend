@@ -1,4 +1,4 @@
-const baseURL = 'https://skyline-backend-krnt.onrender.com/hotels/';
+const baseURL = 'https://skyline-backend.vercel.app/hotels/';
 const userId = localStorage.getItem('user_id');
 console.log("user_id :",userId);
 
@@ -80,7 +80,7 @@ const displayHotels = (hotelsData) => {
 };
 
 const loadDistricts = () => {
-    fetch('https://skyline-backend-krnt.onrender.com/district/')    
+    fetch('https://skyline-backend.vercel.app/district/')    
         .then(res => res.json())
         .then(data => {
             console.log(data);

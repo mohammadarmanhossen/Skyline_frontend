@@ -1,6 +1,4 @@
 
-
-
     const contact = (event) => {
         event.preventDefault();
     
@@ -21,7 +19,7 @@
     
         console.log(data);
     
-        fetch("https://skyline-backend-krnt.onrender.com/client/contact/", {
+        fetch("https://skyline-backend.vercel.app/client/contact/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

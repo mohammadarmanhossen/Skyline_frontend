@@ -1,5 +1,5 @@
 const adminReview = () => {
-    fetch('https://skyline-backend-krnt.onrender.com/reviews/', {
+    fetch('https://skyline-backend.vercel.app/reviews/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const adminReview = () => {
                 const reviewId = event.target.getAttribute('data-id');
 
  
-                fetch(`https://skyline-backend-krnt.onrender.com/reviews/${reviewId}/`, {
+                fetch(`https://skyline-backend.vercel.app/reviews/${reviewId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

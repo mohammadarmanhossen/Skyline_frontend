@@ -1,5 +1,5 @@
 const adminOrder= () => {
-    fetch('https://skyline-backend-krnt.onrender.com/order/', {
+    fetch('https://skyline-backend.vercel.app/order/', {
         method: 'GET',  
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ const adminOrder= () => {
             button.addEventListener('click', (event) => {
                 const orderId = event.target.getAttribute('data-id');
 
-                fetch(`https://skyline-backend-krnt.onrender.com/order/${orderId}/`, {
+                fetch(`https://skyline-backend.vercel.app/order/${orderId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

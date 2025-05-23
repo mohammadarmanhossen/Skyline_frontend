@@ -6,7 +6,7 @@ const showBookingDetails = () => {
         'Content-Type': 'application/json',
     };
 
-    fetch(`https://skyline-backend-krnt.onrender.com/bookeds/${bookedId}/`, { headers })
+    fetch(`https://skyline-backend.vercel.app/bookeds/${bookedId}/`, { headers })
         .then(bookedRes => bookedRes.json())
         .then(booked => {
         
@@ -14,7 +14,7 @@ const showBookingDetails = () => {
             document.getElementById("bookedRoom").innerText=`${booked.room}`
             document.getElementById("totalAmount").innerText = `${booked.total_amount} Tk`;
 
-            return fetch(`https://skyline-backend-krnt.onrender.com/order/${bookedId}`, { headers });
+            return fetch(`https://skyline-backend.vercel.app/order/${bookedId}`, { headers });
         })
 
         .then(userRes => userRes.json())
