@@ -49,7 +49,8 @@ Password: arman
 - **Database:** PostgreSQL
 - **Authentication:** OAuth2 via Gmail
 - **Payment Gateway:** SSLCommerz
-- **Frontend (Optional):** React/Vue (deployed on Netlify)
+- **Frontend Technology:** HTML/Tailwind/Js (deployed on Netlify)
+- **Backend Technology:** Django/postgresql (deployed on Vercel and Database Hosted Superbase)
 
 ---
 
