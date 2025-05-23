@@ -33,7 +33,7 @@ Password: arman
 ```
 ---
 
-## Key Features
+### Key Features
 - **User Authentication** via Gmail OAuth
 - **User Registration Login Logout** via Gmail OAuth
 - **CRUD Operations** for hotel and booking management
@@ -44,7 +44,7 @@ Password: arman
 
 ---
 
-## Tech Stack
+### Tech Stack
 - **Backend:** Django, Django REST Framework
 - **Database:** PostgreSQL
 - **Authentication:** OAuth2 via Gmail
