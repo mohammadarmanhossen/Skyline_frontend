@@ -1,7 +1,7 @@
 # Hotel Booking Website (Skyline)
 
 
-[Skyline(https://skyline-frontend.netlify.app/) is a full-featured hotel booking system developed using Django REST Framework. It offers a seamless experience for users to search for hotels, make bookings, complete secure payments, and share reviews — all in one platform.
+- **Skyline Frontend Live Site:** [Skyline Frontend](https://skyline-frontend.netlify.app/)  is a full-featured hotel booking system developed using Django REST Framework. It offers a seamless experience for users to search for hotels, make bookings, complete secure payments, and share reviews — all in one platform.
 
 The key features of Skyline include:
 User Authentication & Authorization
