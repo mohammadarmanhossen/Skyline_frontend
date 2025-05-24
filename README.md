@@ -1,7 +1,7 @@
 # Hotel Booking Website (Skyline)
 
 
-[SKYLINE](https://skyline-frontend.netlify.app/)  is a full-featured hotel booking system developed using Django REST Framework. It offers a seamless experience for users to search for hotels, make bookings, complete secure payments, and share reviews — all in one platform.
+[SKYLINE](https://skyline-frontend-five.vercel.app/)  is a full-featured hotel booking system developed using Django REST Framework. It offers a seamless experience for users to search for hotels, make bookings, complete secure payments, and share reviews — all in one platform.
 
 The key features of Skyline include:
 User Authentication & Authorization
@@ -55,7 +55,7 @@ Password: arman
 ---
 
 ### Project Live Access Information
-- **Skyline Frontend Netlify Live Site:** [Skyline-Frontend](https://skyline-frontend.netlify.app/)
+- **Skyline Frontend Vercel Live Site:** [Skyline-Frontend](https://skyline-frontend-five.vercel.app/)
 - **Skyline Backend Vercel Server Site:** [Skyline-Backend](https://skyline-backend.vercel.app/)
 ---
 
