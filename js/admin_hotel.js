@@ -1,4 +1,22 @@
+
+
+
+
 const adminHotel = () => {
+  const hotelBody = document.getElementById("hotel-body");
+
+  hotelBody.innerHTML = `
+    <tr>
+      <td colspan="9">
+          <div class="flex justify-center items-center h-[300px] w-full">
+       <div class="w-8 h-8 p-4 font-bold">Lodding Contact</div>
+        <div class="w-8 h-8 border-4 border-gray-700 border-t-transparent rounded-full animate-spin"></div>
+        
+      </div>
+      </td>
+    </tr>
+  `;
+
   fetch("https://skyline-backend.vercel.app/hotels/", {
     method: "GET",
     headers: {
@@ -7,30 +25,29 @@ const adminHotel = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-        data.sort((a, b) => b.id - a.id);
-      const hotelBody = document.getElementById("hotel-body");
-      hotelBody.innerHTML = "";
+      data.sort((a, b) => b.id - a.id);
+      hotelBody.innerHTML = ""; 
 
       data.forEach((hotel) => {
         const row = document.createElement("tr");
-        row.classList.add();
 
         row.innerHTML = `
-                <td class="">${hotel.id}</td>
-                <td class="">${hotel.hotel_name}</td>
-                <td class="">${hotel.description}</td>
-                <td class="">${hotel.address}</td>
-                <td class="">${hotel.district_name}</td>
-                <td class="">${hotel.price_per_night}</td>
-                <td class=""><img src="${hotel.image_url}" alt="${hotel.name}" class="w-16 h-16 object-cover"></td>
-                <td class="">${hotel.available_room}</td>
-                <td class="">
-                    <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${hotel.id}">Delete</button>
-                </td>
-            `;
+          <td>${hotel.id}</td>
+          <td>${hotel.hotel_name}</td>
+          <td>${hotel.description}</td>
+          <td>${hotel.address}</td>
+          <td>${hotel.district_name}</td>
+          <td>${hotel.price_per_night}</td>
+          <td><img src="${hotel.image_url}" alt="${hotel.hotel_name}" class="w-16 h-16 object-cover"></td>
+          <td>${hotel.available_room}</td>
+          <td>
+            <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${hotel.id}">Delete</button>
+          </td>
+        `;
 
         hotelBody.appendChild(row);
       });
+
 
       const deleteButtons = document.querySelectorAll(".delete-button");
       deleteButtons.forEach((button) => {
@@ -42,6 +59,11 @@ const adminHotel = () => {
     })
     .catch((error) => {
       console.error("Error:", error);
+      hotelBody.innerHTML = `
+        <tr>
+          <td colspan="9" class="text-center text-red-500 py-4">Failed to load hotels.</td>
+        </tr>
+      `;
     });
 };
 

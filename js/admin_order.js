@@ -1,4 +1,19 @@
-const adminOrder= () => {
+
+
+const adminOrder = () => {
+    const orderBody = document.getElementById('order-body');
+
+    orderBody.innerHTML = `
+        <tr>
+            <td colspan="6">
+                <div class="flex justify-center items-center h-[300px] w-full">
+                    <div class="text-gray-700 mr-4 text-lg font-semibold">Loading Orders...</div>
+                    <div class="w-8 h-8 border-4 border-gray-700 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+            </td>
+        </tr>
+    `;
+
     fetch('https://skyline-backend.vercel.app/order/', {
         method: 'GET',  
         headers: {
@@ -7,23 +22,20 @@ const adminOrder= () => {
     })
     .then(response => response.json())
     .then(data => {
-        
         data.sort((a, b) => b.id - a.id);
         console.log('Order Data:', data);
 
-        const orderBody = document.getElementById('order-body');
         orderBody.innerHTML = ''; 
-        
+
         data.forEach(order => {
             const row = document.createElement('tr');
-            row.classList.add();
 
             row.innerHTML = `
-                <td class="">${order.id}</td>
-                <td class="">${order.name}</td>
-                <td class="">${order.email}</td>
-                <td class="">${order.address}</td>
-                <td class="">${order.zip_code}</td>
+                <td>${order.id}</td>
+                <td>${order.name}</td>
+                <td>${order.email}</td>
+                <td>${order.address}</td>
+                <td>${order.zip_code}</td>
                 <td class="p-2">
                     <button class="bg-red-500 p-1 font-semibold rounded-md text-gray-800 delete-button" data-id="${order.id}">Delete</button>
                 </td>
@@ -56,13 +68,17 @@ const adminOrder= () => {
                     console.error('Error:', error);
                     alert('Error deleting order.');
                 });
-                
             });
         });
 
     })
     .catch((error) => {
         console.error('Error:', error);
+        orderBody.innerHTML = `
+            <tr>
+                <td colspan="6" class="text-center text-red-500 py-4">Failed to load orders.</td>
+            </tr>
+        `;
     });
 };
 
