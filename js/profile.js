@@ -62,7 +62,7 @@ const userProfile = () => {
                 <a href="/booked_hotel.html" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
                   Booking History
                 </a>
-                <a href="/Change_password.html" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
+                <a href="/change_password.html" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
                   Edit Profile
                 </a>
                 <a href="/contact.html" class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-6 py-2 rounded-full shadow transition text-sm font-medium">
