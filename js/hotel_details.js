@@ -1,6 +1,14 @@
 const params = new URLSearchParams(window.location.search);
 const hotelId = params.get("id");
 
+if(hotelId)
+{
+    document.getElementById("hotel-info").innerHTML = `
+    <div class="w-full h-[300px] flex items-center justify-center">
+      <div class="w-12 h-12 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  `;
+}
 hotelId
   ? fetch(`https://skyline-backend.vercel.app/hotels/${hotelId}/`)
       .then((res) => {
@@ -8,8 +16,8 @@ hotelId
         return res.json();
       })
       .then((hotel) => {
+        
         document.getElementById("hotel-info").innerHTML = `
-
 
       <section class="bg-white py-16  lg:px-12">
        <div class="max-w-12xl mx-auto space-y-16">
@@ -18,6 +26,7 @@ hotelId
       
 
       <div class="w-full h-64 md:h-full">
+      
         <img src="${hotel.image_url}" alt="${hotel.hotel_name}"
           class="w-full h-full object-cover rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
       </div>

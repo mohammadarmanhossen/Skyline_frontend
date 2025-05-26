@@ -27,11 +27,9 @@ const navbar = () => {
   } else {
       navbar.innerHTML = `
           <a href="login.html" class="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow">
-              <img src="image/logout.svg" alt="Login Icon" class="w-6 h-6">
               <span class="font-bold">Login</span>
           </a>
           <a href="register.html" class="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-4 py-2 rounded-md shadow">
-              <img src="image/logout.svg" alt="Login Icon" class="w-6 h-6">
               <span class="font-bold">Register</span>
           </a>
       `;

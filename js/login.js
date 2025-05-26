@@ -1,4 +1,19 @@
 
+const showSpinner = () => {
+  const spinnerContainer = document.getElementById("spinner-container");
+  spinnerContainer.innerHTML = `
+    <div class="w-full h-[200px] flex items-center justify-center">
+      <div class="w-12 h-12 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
+    </div>
+  `;
+};
+
+const hideSpinner = () => {
+  const spinnerContainer = document.getElementById("spinner-container");
+  spinnerContainer.innerHTML = "";
+};
+
+
 const handleLogin = (event) => {
   event.preventDefault();
 
@@ -11,6 +26,8 @@ const handleLogin = (event) => {
       username: username,
       password: password
     };
+
+        showSpinner(); 
 
     fetch("https://skyline-backend.vercel.app/client/admin/login/", {
       method: "POST",
@@ -25,6 +42,7 @@ const handleLogin = (event) => {
   
         localStorage.setItem("token", data.token);
         localStorage.setItem("admin_id", data.admin_id);
+         hideSpinner(); 
 
         Swal.fire({
           title: 'Success!',
@@ -52,6 +70,7 @@ const handleLogin = (event) => {
         })
         .then(res => res.json())
         .then(data => {
+          hideSpinner();
           if (data.token && data.user_id) {
       
             localStorage.setItem("token", data.token);
@@ -104,6 +123,7 @@ const handleLogin = (event) => {
     });
   }
 };
+
 
 
 
