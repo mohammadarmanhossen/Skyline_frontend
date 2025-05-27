@@ -58,7 +58,7 @@ const showBookedHotel = () => {
             const bookedHotel = document.getElementById("bookedHotel");
             const totalAmount = document.getElementById("totalAmount");
 
-            bookedHotel.innerText = `Hotel : ${data.hotel_name}, Room: ${data.room}`;
+            bookedHotel.innerText = `Hotel : ${data.hotel}, Room: ${data.room}`;
             totalAmount.innerText = `Total Amount : ${data.total_amount} Tk`;
         })
         .catch((error) => {

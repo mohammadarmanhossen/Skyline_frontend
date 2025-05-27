@@ -16,7 +16,7 @@ const hotels = (districtId = "all", searchQuery = "") => {
   const params = [];
 
   if (districtId !== "all") {
-    params.push(`district=${encodeURIComponent(districtId)}`);
+    params.push(`district_names=${encodeURIComponent(districtId)}`); // ✅ fixed line
   }
 
   if (searchQuery.trim() !== "") {

@@ -64,7 +64,7 @@ fetch("https://skyline-backend.vercel.app/bookeds/")
 
       row.innerHTML = `
             <td class="border px-4 py-2 text-center">${item.id}</td>
-            <td class="border px-4 py-2 text-center">${item.hotel_name}</td>
+            <td class="border px-4 py-2 text-center">${item.hotel}</td>
             <td class="border px-4 py-2 text-center">${item.room}</td>
             <td class="border px-4 py-2 text-center">${item.in_date}</td>
             <td class="border px-4 py-2 text-center">${item.out_date}</td>

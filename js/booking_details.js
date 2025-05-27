@@ -10,7 +10,7 @@ const showBookingDetails = () => {
         .then(bookedRes => bookedRes.json())
         .then(booked => {
         
-            document.getElementById("bookedHotel").innerText = `${booked.hotel_name}`;
+            document.getElementById("bookedHotel").innerText = `${booked.hotel}`;
             document.getElementById("bookedRoom").innerText=`${booked.room}`
             document.getElementById("totalAmount").innerText = `${booked.total_amount} Tk`;
 
