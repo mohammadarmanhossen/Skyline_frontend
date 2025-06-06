@@ -1,9 +1,8 @@
 const params = new URLSearchParams(window.location.search);
 const hotelId = params.get("id");
 
-if(hotelId)
-{
-    document.getElementById("hotel-info").innerHTML = `
+if (hotelId) {
+  document.getElementById("hotel-info").innerHTML = `
     <div class="w-full h-[300px] flex items-center justify-center">
       <div class="w-12 h-12 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
     </div>
@@ -16,7 +15,6 @@ hotelId
         return res.json();
       })
       .then((hotel) => {
-        
         document.getElementById("hotel-info").innerHTML = `
 
       <section class="bg-white py-16  lg:px-12">
@@ -50,7 +48,7 @@ hotelId
       </div>
     </div>
 
-
+    
     <div class="space-y-12 border p-4 rounded-xl">
       <div>
         <h2 class="text-4xl font-bold text-gray-800 mb-4">🏨 Overview</h2>

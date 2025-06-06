@@ -1,7 +1,11 @@
 const personalInfo = (event) => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("id");
   event.preventDefault();
+  const urlParams = new URLSearchParams(window.location.search);
+  const bookedId = urlParams.get("id");
+  console.log("bookedId =", bookedId); 
+  const id = urlParams.get("id");
+  console.log("id =", id);
+
 
   const user_id = localStorage.getItem("user_id");
   const name = document.getElementById("name").value;
@@ -15,11 +19,12 @@ const personalInfo = (event) => {
     email: email,
     address: address,
     zip_code: zip,
+    booked: bookedId,
   };
 
   console.log("personalInfo", data);
 
-  fetch(`https://skyline-backend.vercel.app/order/${id}/`, {
+  fetch(`https://skyline-backend.vercel.app/order/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
