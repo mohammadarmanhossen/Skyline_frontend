@@ -78,6 +78,9 @@
                         placeholder="Enter your password" />
                 </div>
 
+              
+
+
                 <div class="flex justify-between items-center text-sm">
                     <label class="flex items-center gap-2 text-gray-600">
                         <input type="checkbox" class="accent-blue-500" />
@@ -195,6 +198,19 @@
             © 2025 Skyline Hotel Booking Ltd. All rights reserved.
         </div>
     </footer>
+
+
+<script>
+    function togglePassword() {
+        const passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+</script>
+
 
     <script src="./js/home.js"></script>
     <script src="./js/login.js"></script>
