@@ -1,16 +1,3 @@
-const showSpinner = () => {
-  const spinnerContainer = document.getElementById("spinner-container");
-  spinnerContainer.innerHTML = `
-    <div class="w-full h-[200px] flex items-center justify-center">
-      <div class="w-12 h-12 border-4 border-gray-800 border-t-transparent rounded-full animate-spin"></div>
-    </div>
-  `;
-};
-
-const hideSpinner = () => {
-  const spinnerContainer = document.getElementById("spinner-container");
-  spinnerContainer.innerHTML = "";
-};
 
 const handleRegistration = (event) => {
   event.preventDefault();
@@ -48,7 +35,7 @@ const handleRegistration = (event) => {
     return;
   }
 
-   showSpinner(); 
+
   fetch("https://skyline-backend.vercel.app/client/register/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -56,7 +43,7 @@ const handleRegistration = (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      hideSpinner();
+    
       console.log(data);
       Swal.fire({
         title: "Email Confirmed!",
@@ -68,5 +55,5 @@ const handleRegistration = (event) => {
       });
     })
     .catch((error) => console.error("Error:", error));
-  hideSpinner();
+
 };
