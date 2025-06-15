@@ -15,8 +15,8 @@
 </head>
 
 <body class="bg-white ">
-   
-     <nav class="bg-gray-900 p-5 fixed top-0 left-0 w-full shadow-md z-50">
+
+    <nav class="bg-gray-900 p-5 fixed top-0 left-0 w-full shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-xl font-bold  md:text-4xl">SKYLINE</a>
             <button id="menu-btn" class="block md:hidden text-white focus:outline-none text-3xl">
@@ -43,149 +43,185 @@
                 <li><a href="contact.html" class="block hover:text-blue-500 font-bold">Contact</a></li>
             </ul>
 
- 
+
             <div id="mobileNavbarElement" class="pt-2 border-t border-gray-200"></div>
         </div>
 
     </nav>
 
 
-    <main class="min-h-screen bg-gradient-to-br from-gray-white to-gray-300 flex items-center justify-center px-4 pt-20">
-    <div class="bg-white backdrop-blur-lg border border-gray-300 shadow-2xl rounded-2xl p-8 w-full max-w-md">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h2>
-        
-         <!-- <div id="spinner-container" class="my-4"></div> -->
+    <main
+        class="min-h-screen bg-gradient-to-br from-gray-white to-gray-300 flex items-center justify-center px-4 pt-20">
+        <div class="bg-white backdrop-blur-lg border border-gray-300 shadow-2xl rounded-2xl p-8 w-full max-w-md">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Create Account</h2>
 
-        <form onsubmit="handleRegistration(event)" class="space-y-4">
-            <div>
-                <label for="username" class="block text-sm font-semibold text-gray-700">Username</label>
-                <input type="text" id="username" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="Enter your username" />
+            <!-- Spinner Container -->
+            <div id="spinner-container" class="fixed inset-0 bg-opacity-50 z-50 hidden">
+                <div class="flex items-center justify-center w-full h-full">
+                    <div class="w-12 h-12 border-4 border-black border-t-transparent rounded-full animate-spin"></div>
+                </div>
             </div>
 
-            <div>
-                <label for="firstname" class="block text-sm font-semibold text-gray-700">First Name</label>
-                <input type="text" id="firstname" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="Your first name" />
-            </div>
 
-            <div>
-                <label for="lastname" class="block text-sm font-semibold text-gray-700">Last Name</label>
-                <input type="text" id="lastname" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="Your last name" />
-            </div>
+            <form onsubmit="handleRegistration(event)" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-sm font-semibold text-gray-700">Username</label>
+                    <input type="text" id="username" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="Enter your username" />
+                </div>
 
-            <div>
-                <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
-                <input type="email" id="email" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="example@email.com" />
-            </div>
+                <div>
+                    <label for="firstname" class="block text-sm font-semibold text-gray-700">First Name</label>
+                    <input type="text" id="firstname" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="Your first name" />
+                </div>
 
-            <div>
-                <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
-                <input type="password" id="password" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="Create a password" />
-            </div>
+                <div>
+                    <label for="lastname" class="block text-sm font-semibold text-gray-700">Last Name</label>
+                    <input type="text" id="lastname" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="Your last name" />
+                </div>
 
-            <div>
-                <label for="confirm_password" class="block text-sm font-semibold text-gray-700">Confirm Password</label>
-                <input type="password" id="confirm_password" required
-                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                    placeholder="Repeat your password" />
-            </div>
+                <div>
+                    <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+                    <input type="email" id="email" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="example@email.com" />
+                </div>
 
-            <div id="error" class="text-red-500 text-sm"></div>
+                <div class="relative">
+                    <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
+                    <input type="password" id="password" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="Create a password" />
+                    <span id="toggle_password" class="absolute right-3 top-8 cursor-pointer text-gray-500 text-sm">
+                        👁️
+                    </span>
+                </div>
 
-            <button type="submit"
-                class="w-full bg-gray-600  text-white py-2 rounded-lg hover:to-gray-700 transition duration-300 focus:ring-2 focus:ring-gray-500">
-                Register
-            </button>
+                <div class="relative">
+                    <label for="confirm_password" class="block text-sm font-semibold text-gray-700">Confirm
+                        Password</label>
+                    <input type="password" id="confirm_password" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                        placeholder="Repeat your password" />
+                    <span id="toggle_confirm_password" class="absolute right-3 top-8 cursor-pointer text-gray-500 text-sm">
+                        👁️
+                    </span>
+                </div>
 
-            <p class="text-center text-gray-600 text-sm pt-4">
-                Already have an account?
-                <a href="login.html" class="text-blue-500 font-medium hover:underline">Login here</a>
-            </p>
-        </form>
-    </div>
-</main>
+                <div id="error" class="text-red-500 text-sm"></div>
 
-   
-<footer class="bg-gray-900 text-white px-6 py-10 pt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-
-
-            <div>
-            <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
-            <p class="text-sm text-gray-400">
-                Quick service <br>
-                Delivery 1-5 day <br>
-                Office Dhaka 55 Dilkusha C/A, Motijheel,
-            </p>
-            <div class="flex space-x-4 mt-4">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
-                </a>
-            </div>
-        
-        </div>
- 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-gray-300">
-                <li><a href="#" class="hover:text-white">› Home</a></li>
-                <li><a href="#" class="hover:text-white">› About</a></li>
-                <li><a href="#" class="hover:text-white">› Services</a></li>
-                <li><a href="#" class="hover:text-white">› Products</a></li>
-                <li><a href="#" class="hover:text-white">› Media & News</a></li>
-                <li><a href="#" class="hover:text-white">› Contact</a></li>
-                <li><a href="#" class="hover:text-white">› Terms & Conditions</a></li>
-                <li><a href="#" class="hover:text-white">› Privacy Policy</a></li>
-                <li><a href="#" class="hover:text-white">› FAQ</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Office</h3>
-            <p class="text-sm text-gray-400">
-                Level -5, NIK Tower, <br>
-                55 Dilkusha C/A, Motijheel, <br>
-                Dhaka-1000, Bangladesh
-            </p>
-            <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai" class="hover:underline">support@skylinehotel.ai</a></p>
-            <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88) 01765034196</a></p>
-        </div>
-
-
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
-            <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on products.</p>
-            <form class="flex flex-col space-y-3">
-                <input type="email" placeholder="Your email address" required
-                    class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
                 <button type="submit"
-                    class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
+                    class="w-full bg-gray-600  text-white py-2 rounded-lg hover:to-gray-700 transition duration-300 focus:ring-2 focus:ring-gray-500">
+                    Register
+                </button>
+
+                <p class="text-center text-gray-600 text-sm pt-4">
+                    Already have an account?
+                    <a href="login.html" class="text-blue-500 font-medium hover:underline">Login here</a>
+                </p>
             </form>
         </div>
-    </div>
+    </main>
 
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        © 2025 Skyline Hotel Booking Ltd. All rights reserved.
-    </div>
-</footer>
+
+    <footer class="bg-gray-900 text-white px-6 py-10 pt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
+                <p class="text-sm text-gray-400">
+                    Quick service <br>
+                    Delivery 1-5 day <br>
+                    Office Dhaka 55 Dilkusha C/A, Motijheel,
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-white">› Home</a></li>
+                    <li><a href="#" class="hover:text-white">› About</a></li>
+                    <li><a href="#" class="hover:text-white">› Services</a></li>
+                    <li><a href="#" class="hover:text-white">› Products</a></li>
+                    <li><a href="#" class="hover:text-white">› Media & News</a></li>
+                    <li><a href="#" class="hover:text-white">› Contact</a></li>
+                    <li><a href="#" class="hover:text-white">› Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-white">› Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">› FAQ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Office</h3>
+                <p class="text-sm text-gray-400">
+                    Level -5, NIK Tower, <br>
+                    55 Dilkusha C/A, Motijheel, <br>
+                    Dhaka-1000, Bangladesh
+                </p>
+                <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai"
+                        class="hover:underline">support@skylinehotel.ai</a></p>
+                <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88)
+                        01765034196</a></p>
+            </div>
+
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on
+                    products.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your email address" required
+                        class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
+                    <button type="submit"
+                        class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+            © 2025 Skyline Hotel Booking Ltd. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <script>
+        function togglePasswordVisibility(inputId, toggleId) {
+            const input = document.getElementById(inputId);
+            const toggle = document.getElementById(toggleId);
+
+            toggle.addEventListener('click', () => {
+                const isPassword = input.type === 'password';
+                input.type = isPassword ? 'text' : 'password';
+                toggle.textContent = isPassword ? '🙈' : '👁️';
+            });
+        }
+
+        togglePasswordVisibility('password', 'toggle_password');
+        togglePasswordVisibility('confirm_password', 'toggle_confirm_password');
+    </script>
+
 
     <script src="./js/home.js"></script>
     <script src="./js/login.js"></script>

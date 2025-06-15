@@ -1,4 +1,6 @@
 
+
+
 const handleRegistration = (event) => {
   event.preventDefault();
 
@@ -17,7 +19,6 @@ const handleRegistration = (event) => {
     password,
     confirm_password,
   };
-  console.log(info);
 
   if (password !== confirm_password) {
     document.getElementById("error").innerText =
@@ -36,6 +37,8 @@ const handleRegistration = (event) => {
   }
 
 
+  document.getElementById("spinner-container").classList.remove("hidden");
+
   fetch("https://skyline-backend.vercel.app/client/register/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -43,8 +46,11 @@ const handleRegistration = (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-    
       console.log(data);
+
+
+      document.getElementById("spinner-container").classList.add("hidden");
+
       Swal.fire({
         title: "Email Confirmed!",
         text: "Your email has been verified successfully. Please log in to continue.",
@@ -54,6 +60,9 @@ const handleRegistration = (event) => {
         window.location.href = "login.html";
       });
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Error:", error);
 
+      document.getElementById("spinner-container").classList.add("hidden");
+    });
 };
