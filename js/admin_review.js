@@ -9,7 +9,7 @@ const adminReview = () => {
         <tr>
             <td colspan="5">
                 <div class="flex justify-center items-center h-[300px] w-full">
-                    <div class="text-gray-700 mr-4 text-lg font-semibold">Loading Reviews...</div>
+                   <div class="text-gray-700 mr-4 text-lg font-semibold">Loading Reviews...</div>
                     <div class="w-8 h-8 border-4 border-gray-700 border-t-transparent rounded-full animate-spin"></div>
                 </div>
             </td>

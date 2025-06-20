@@ -9,7 +9,7 @@ const adminHotel = () => {
     <tr>
       <td colspan="9">
           <div class="flex justify-center items-center h-[300px] w-full">
-       <div class="w-8 h-8 p-4 font-bold">Lodding Contact</div>
+   <div class="text-gray-700 mr-4 text-lg font-semibold">Loading Hotels...</div>
         <div class="w-8 h-8 border-4 border-gray-700 border-t-transparent rounded-full animate-spin"></div>
         
       </div>
