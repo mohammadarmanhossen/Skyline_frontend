@@ -43,7 +43,7 @@ const userProfile = () => {
                 📍 Dhaka, Bangladesh
               </div>
 
-              <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div class="mt-8 grid grid-cols-3 md:grid-cols-3 gap-6 text-center">
                 <div>
                   <p class="text-xl font-bold text-gray-600">10</p>
                   <p class="text-sm text-gray-500">Total Bookings</p>
