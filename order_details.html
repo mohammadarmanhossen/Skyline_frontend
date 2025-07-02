@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue-router@3"></script>
-   <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 
@@ -19,7 +19,7 @@
 
 <body class="bg-gray-100">
 
- 
+
     <nav class="bg-gray-900 p-5 fixed top-0 left-0 w-full shadow-md z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="index.html" class="text-white text-xl font-bold  md:text-4xl">SKYLINE</a>
@@ -32,7 +32,7 @@
                 <li><a href="service.html" class="hover:text-gray-400">Service</a></li>
                 <li><a href="booking.html" class="hover:text-gray-400">Booking</a></li>
                 <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
-                 <li><a href="restaurant.html" class="hover:text-gray-400">Restaurant</a></li>
+                <li><a href="restaurant.html" class="hover:text-gray-400">Restaurant</a></li>
             </ul>
 
             <ul class="text-center hidden sm:block" id="navbarElement"></ul>
@@ -55,109 +55,101 @@
 
     </nav>
 
-<div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-16">
-    <div class="w-full max-w-5xl px-4">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">🧾 Order Items</h2>
-        <div class="overflow-x-auto shadow-xl rounded-2xl bg-white">
-            <table class="min-w-full divide-y divide-gray-200 text-sm text-center">
-                <thead class="bg-gray-800 text-white">
-                    <tr>
-                        <th class="px-6 py-3 font-semibold">ID</th>
-                        <th class="px-6 py-3 font-semibold">Product Name</th>
-                        <th class="px-6 py-3 font-semibold">Quantity</th>
-                        <th class="px-6 py-3 font-semibold">Status</th>
-                        <th class="px-6 py-3 font-semibold">Is Paid</th>
-                        <th class="px-6 py-3 font-semibold">Details</th>
-                    </tr>
-                </thead>
-                <tbody id="order-table-body" class="divide-y divide-gray-100 bg-white">
-                    <!-- JS দিয়ে data আসবে এখানে -->
-                </tbody>
-            </table>
+    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-16">
+        <div class="w-full max-w-5xl px-4">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">🧾 Order Items</h2>
+            <div class="overflow-x-auto shadow-xl rounded-2xl bg-white">
+                <table class="min-w-full divide-y divide-gray-200 text-sm text-center">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="px-6 py-3 font-semibold">ID</th>
+                            <th class="px-6 py-3 font-semibold">Product Name</th>
+                            <th class="px-6 py-3 font-semibold">Quantity</th>
+                            <th class="px-6 py-3 font-semibold">Status</th>
+                            <th class="px-6 py-3 font-semibold">Is Paid</th>
+                            <th class="px-6 py-3 font-semibold">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-table-body" class="divide-y divide-gray-100 bg-white">
+                        <!-- JS দিয়ে data আসবে এখানে -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 
 
 
+    <footer class="bg-gray-900 text-white px-6 py-10 pt-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
+                <p class="text-sm text-gray-400">
+                    Quick service <br>
+                    Delivery 1-5 day <br>
+                    Office Dhaka 55 Dilkusha C/A, Motijheel,
+                </p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.facebook.com/mbarmanhossen123" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="https://x.com/home" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/armanps1/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mdarmanhossen404/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
+                    </a>
+                </div>
 
+            </div>
 
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="index.html" class="hover:text-white">› Home</a></li>
+                    <li><a href="about.html" class="hover:text-white">› About</a></li>
+                    <li><a href="service.html" class="hover:text-white">› Services</a></li>
+                    <li><a href="contact.html" class="hover:text-white">› Contact</a></li>
+                </ul>
+            </div>
 
-
-
-  
-<footer class="bg-gray-900 text-white px-6 py-10 pt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Office</h3>
+                <p class="text-sm text-gray-400">
+                    Level -5, NIK Tower, <br>
+                    55 Dilkusha C/A, Motijheel, <br>
+                    Dhaka-1000, Bangladesh
+                </p>
+                <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai"
+                        class="hover:underline">support@skylinehotel.ai</a></p>
+                <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88)
+                        01765034196</a></p>
+            </div>
 
 
             <div>
-            <h3 class="text-xl font-semibold mb-4">Skyline Hotel Booked Site</h3>
-            <p class="text-sm text-gray-400">
-                Quick service <br>
-                Delivery 1-5 day <br>
-                Office Dhaka 55 Dilkusha C/A, Motijheel,
-            </p>
-            <div class="flex space-x-4 mt-4">
-                <a href="#" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook-f text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in text-gray-400 hover:text-white text-lg"></i>
-                </a>
-                <a href="#" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram text-gray-400 hover:text-white text-lg"></i>
-                </a>
+                <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on
+                    products.</p>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Your email address" required
+                        class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
+                    <button type="submit"
+                        class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
+                </form>
             </div>
-        
-        </div>
- 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2 text-gray-300">
-                <li><a href="#" class="hover:text-white">› Home</a></li>
-                <li><a href="#" class="hover:text-white">› About</a></li>
-                <li><a href="#" class="hover:text-white">› Services</a></li>
-                <li><a href="#" class="hover:text-white">› Products</a></li>
-                <li><a href="#" class="hover:text-white">› Media & News</a></li>
-                <li><a href="#" class="hover:text-white">› Contact</a></li>
-                <li><a href="#" class="hover:text-white">› Terms & Conditions</a></li>
-                <li><a href="#" class="hover:text-white">› Privacy Policy</a></li>
-                <li><a href="#" class="hover:text-white">› FAQ</a></li>
-            </ul>
-        </div>
 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Office</h3>
-            <p class="text-sm text-gray-400">
-                Level -5, NIK Tower, <br>
-                55 Dilkusha C/A, Motijheel, <br>
-                Dhaka-1000, Bangladesh
-            </p>
-            <p class="mt-2 text-sm text-gray-400">📧 <a href="mailto:support@skylinehotel.ai" class="hover:underline">support@skylinehotel.ai</a></p>
-            <p class="text-sm text-gray-400">📞 <a href="tel:+8801765034196" class="hover:underline">(+88) 01765034196</a></p>
         </div>
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+            © 2025 Skyline Hotel Booking Ltd. All rights reserved.
+        </div>
+    </footer>
 
 
-        <div>
-            <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
-            <p class="text-sm text-gray-400 mb-4">Subscribe to our newsletter to receive updates and insights on products.</p>
-            <form class="flex flex-col space-y-3">
-                <input type="email" placeholder="Your email address" required
-                    class="px-4 py-2 bg-gray-800 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-600">
-                <button type="submit"
-                    class="bg-gray-700 hover:bg-amber-900 text-white font-bold py-2 rounded-md">Subscribe</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-        © 2025 Skyline Hotel Booking Ltd. All rights reserved.
-    </div>
-</footer>
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -166,11 +158,11 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
-     <script src="./js/home.js"></script>
-     <script src="./js/product_details.js"></script>
-     <script src="./js/login.js"></script>
-     <script src="./js/navbar.js"></script>
-     <script src="./js/cart.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/product_details.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/cart.js"></script>
     <script src="./js/order_details.js"></script>
 
 </body>
