@@ -60,8 +60,21 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-6 p-5">Login Account</h2>
 
 
-            <div id="spinner-container" class="my-4"></div>
+            <div id="spinner-container" class="my-4">
 
+            </div>
+
+            <div class="flex gap-4 mb-6 pt-10">
+                <button onclick="autoLogin('admin')"
+                    class="px-4 py-2 border border-amber-200 rounded text-amber-900 hover:bg-amber-50 transition-colors">
+                    Admin login
+                </button>
+
+                <button onclick="autoLogin('user')"
+                    class="px-4 py-2 border border-amber-50 rounded text-amber-900 hover:bg-amber-50 transition-colors">
+                    User login
+                </button>
+            </div>
 
             <form onsubmit="handleLogin(event)" class="space-y-5">
 
@@ -100,24 +113,6 @@
                     class="w-full bg-gray-600  text-white py-2 rounded-lg  hover:to-gray-700 transition duration-300">
                     Login
                 </button>
-
-
-                <div class="bg-white/60 p-4 rounded-xl text-sm text-gray-800 shadow-inner">
-                    <p class="font-semibold mb-2 text-center text-gray-700">Test Accounts</p>
-                    <div class="justify-between gap-4 text-xs">
-                        <div class="space-y-1">
-                            <h3 class="text-xl font-semibold text-gray-700">Admin</h3>
-                            <p><b>Username : </b> admin</p>
-                            <p><b>Password : </b> admin</p>
-                        </div>
-                        <div class="space-y-1">
-                            <h3 class="text-xl font-semibold text-gray-700">User</h3>
-                            <p><b>Username : </b> arman</p>
-                            <p><b>Password : </b> arman</p>
-                        </div>
-                    </div>
-                </div>
-
 
                 <p class="text-center text-gray-600 text-sm pt-4">
                     Don't have an account?
@@ -202,6 +197,19 @@
     </footer>
 
 
+    <script>
+        function autoLogin(role) {
+            const usernameField = document.getElementById('username');
+            const passwordField = document.getElementById('password');
+            if (role === 'admin') {
+                usernameField.value = 'admin';
+                passwordField.value = 'admin';
+            } else if (role === 'user') {
+                usernameField.value = 'arman';
+                passwordField.value = 'arman';
+            }
+        }
+    </script>
 
     <script>
         const passwordInput = document.getElementById("password");
