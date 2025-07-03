@@ -1,7 +1,4 @@
 
-
-
-
 const adminHotel = () => {
   const hotelBody = document.getElementById("hotel-body");
 

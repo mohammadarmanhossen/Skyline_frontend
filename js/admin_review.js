@@ -45,7 +45,7 @@ const adminReview = () => {
             reviewBody.appendChild(row); 
         });
 
-        // ✅ Delete Button Event
+     
         const deleteButtons = document.querySelectorAll('.delete-button');
         deleteButtons.forEach(button => {
             button.addEventListener('click', (event) => {
