@@ -46,3 +46,79 @@ new Chart(ctx, {
         }
     }
 });
+
+
+
+
+
+const animateCount = (element, target, duration = 1000) => {
+  let start = 0;
+  const stepTime = Math.max(Math.floor(duration / target), 20);
+  const step = () => {
+    start += 1;
+    element.textContent = start;
+    if (start < target) {
+      setTimeout(step, stepTime);
+    } else {
+      element.textContent = target;
+    }
+  };
+  step();
+};
+
+const countUser = () => {
+  fetch('https://skyline-backend.vercel.app/client/users/')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      const count = Array.isArray(data) ? data.length : 0;
+      animateCount(document.getElementById('total-users'), count);
+    })
+    .catch(() => {
+      document.getElementById('total-users').textContent = 'Error';
+    });
+};
+
+const countHotel = () => {
+  fetch('https://skyline-backend.vercel.app/hotels/')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      const count = Array.isArray(data) ? data.length : 0;
+      animateCount(document.getElementById('total-hotels'), count);
+    })
+    .catch(() => {
+      document.getElementById('total-hotels').textContent = 'Error';
+    });
+};
+
+const countBooked = () => {
+  fetch('https://skyline-backend.vercel.app/bookeds/')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      const count = Array.isArray(data) ? data.length : 0;
+      animateCount(document.getElementById('total-bookeds'), count);
+    })
+    .catch(() => {
+      document.getElementById('total-bookeds').textContent = 'Error';
+    });
+};
+
+const countDistrict= () => {
+  fetch('https://skyline-backend.vercel.app/district/')
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      const count = Array.isArray(data) ? data.length : 0;
+      animateCount(document.getElementById('total-districts'), count);
+    })
+    .catch(() => {
+      document.getElementById('total-districts').textContent = 'Error';
+    });
+};
+
+countUser();
+countHotel();
+countBooked();
+countDistrict();

@@ -65,15 +65,16 @@
             </div>
 
             <div class="flex gap-4 mb-6 pt-10">
-                <button onclick="autoLogin('admin')"
-                    class="px-4 py-2 border border-amber-200 rounded text-amber-900 hover:bg-amber-50 transition-colors">
+              
+                <button onclick="autoLogin('user')"
+                    class="px-4 py-2 border border-amber-50 rounded font-semibold text-gray-300 bg-gray-600 hover:bg-gray-500 transition-colors">
+                    User login
+                </button>
+                  <button onclick="autoLogin('admin')"
+                    class="px-4 py-2 border border-amber-50 rounded font-semibold text-gray-300 bg-gray-600 hover:bg-gray-500 transition-color">
                     Admin login
                 </button>
 
-                <button onclick="autoLogin('user')"
-                    class="px-4 py-2 border border-amber-50 rounded text-amber-900 hover:bg-amber-50 transition-colors">
-                    User login
-                </button>
             </div>
 
             <form onsubmit="handleLogin(event)" class="space-y-5">
