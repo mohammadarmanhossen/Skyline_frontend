@@ -16,7 +16,7 @@ const hotels = (districtId = "all", searchQuery = "") => {
   const params = [];
 
   if (districtId !== "all") {
-    params.push(`district_names=${encodeURIComponent(districtId)}`); // ✅ fixed line
+    params.push(`district_names=${encodeURIComponent(districtId)}`); 
   }
 
   if (searchQuery.trim() !== "") {
@@ -70,6 +70,7 @@ const displayHotels = (hotelsData) => {
     .map(
       (hotel) => `
         <div class="max-w-sm bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden m-4">
+        
             <img class="w-full h-56 object-cover" src="${
               hotel.image_url
             }" alt="${hotel.hotel_name}">
@@ -102,9 +103,6 @@ const displayHotels = (hotelsData) => {
                 </a>
             </div>
         </div>
-
-        
-
         
     `
     )
