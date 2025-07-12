@@ -72,8 +72,17 @@ function deleteHotel(hotelId) {
     },
   })
     .then((response) => {
-      if (response.ok) {
-        adminHotel();
+      if (response.ok) {  
+        location.reload();
+      } else {
+          Swal.fire({
+              title: 'Success!',
+              text: 'Hotel has been deleted in successfully.',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            location.reload();
+            
       }
     })
     .catch((error) => {
@@ -82,54 +91,8 @@ function deleteHotel(hotelId) {
     });
 }
 
+
 adminHotel();
 
 
 
-
-document.getElementById("hotelForm").addEventListener("submit", (e) => {
-    e.preventDefault(); 
-  
-    const hotelName = document.getElementById("hotel_name").value;
-    const description = document.getElementById("description").value;
-    const address = document.getElementById("address").value;
-    const district = document.getElementById("district").value;
-    const price = document.getElementById("price").value;
-    const room = document.getElementById("room").value;
-    const image = document.getElementById("image").value;
-  
-    const data = {
-      hotel_name: hotelName,
-      description: description,
-      address: address,
-      district_names: parseFloat(district),
-      price_per_night: parseFloat(price),
-      available_room: parseInt(room),
-      image_url: image,
-    };
-  
-    console.log(data);
-  
-    fetch("https://skyline-backend.vercel.app/hotels/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to add hotel");
-        }
-        return res.json();
-      })
-      .then((responseData) => {
-        alert("Hotel added successfully!");
-        document.getElementById("hotelForm").reset();
-      })
-      .catch((error) => {
-        alert("Error: " + error.message);
-        console.error(error);
-      });
-  });
-  

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Hotel</title>
     <link href="./output.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -52,7 +52,7 @@
     <div class="flex flex-col md:flex-row flex-grow pt-15">
 
 
-        
+
         <aside class="-full md:w-1/4 lg:w-1/8 bg-white text-gray-800 p-6  shadow-lg">
             <h2 class="text-2xl  font-bold text-gray-800 mb-6 text-center md:text-left">Dashboard</h2>
             <ul class="space-y-2">
@@ -61,32 +61,39 @@
                         class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
                         <i class="fas fa-tachometer-alt"></i>
                         <span>Overview</span>
-                    </a>    
+                    </a>
                 </li>
                 <li>
                     <a href="admin_order.html"
-                         class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                        class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
                         <i class="fas fa-shopping-cart"></i>
                         <span>Order Info</span>
                     </a>
                 </li>
                 <li>
+                    <a href="admin_hotel_add.html"
+                        class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                        <i class="fas fa-star"></i>
+                        <span>Add Hotel</span>
+                    </a>
+                </li>
+                <li>
                     <a href="admin_hotel.html"
-                         class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                        class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
                         <i class="fas fa-hotel"></i>
                         <span>Hotels</span>
                     </a>
                 </li>
                 <li>
                     <a href="admin_contact.html"
-                         class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                        class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
                         <i class="fas fa-envelope"></i>
                         <span>Contacts</span>
                     </a>
                 </li>
                 <li>
                     <a href="admin_user.html"
-                         class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
+                        class="flex items-center gap-2 p-2 border-1 font-semibold border-gray-300 rounded-lg hover:bg-gray-600 hover:text-white transition">
                         <i class="fas fa-users"></i>
                         <span>Users</span>
                     </a>
@@ -108,72 +115,9 @@
 
             <div class="mt-6 bg-white shadow rounded p-4 overflow-x-auto">
 
-                <form id="hotelForm" class="space-y-4 bg-white p-2 rounded">
-
-
-                    <div>
-                        <label for="hotel_name">Hotel Name</label>
-                        <input id="hotel_name" type="text" placeholder="Enter your hotel name"
-                            class="w-full border p-2 rounded">
-                    </div>
-
-                    <div>
-                        <label for="description">Description</label>
-                        <input id="description" type="text" placeholder="Enter your description"
-                            class="w-full border p-2 rounded">
-                    </div>
-
-                    <div>
-                        <label for="address">Address</label>
-                        <input id="address" type="text" placeholder="Enter your address"
-                            class="w-full border p-2 rounded">
-                    </div>
-
-                    <div>
-                        <label for="district">District</label>
-                        <select id="district" class="w-full border p-2 rounded">
-                            <option value="1">Dhaka</option>
-                            <option value="2">Khulna</option>
-                            <option value="3">Rajshahi</option>
-                            <option value="4">Barisal</option>
-                            <option value="5">Rangpur</option>
-                            <option value="6">Chattogram</option>
-                        </select>
-
-                    </div>
-
-                    <div>
-                        <label for="price">Price</label>
-                        <input id="price" type="number" placeholder="Enter your price"
-                            class="w-full border p-2 rounded">
-                    </div>
-
-                    <div>
-                        <label for="room">Room</label>
-                        <value="1">
-                        <input id="room" type="number" placeholder="Enter your room" class="w-full border p-2 rounded">
-                       
-                    </div>
-                    
-
-                    <div>
-                        <label for="image">Image Url</label>
-                        <input id="image" type="text" value="https://i.ibb.co.com/sdWBqjgK/595037303.jpg" placeholder="Enter your image url"class="w-full border p-2 rounded">
-                    </div>
-
-
-                    <div>
-                        <button type="submit" class="bg-gray-500 text-white px-4 py-2 rounded">Add Hotel</button>
-                    </div>
-
-
-                </form>
-
-
-
                 <div class="overflow-x-auto p-2">
                     <table class="w-full min-w-max text-sm text-left text-gray-700 bg-white">
-                          <h2 class="text-lg font-extrabold py-5">Recent Hotel</h2>
+                        <h2 class="text-lg font-extrabold py-5">Recent Hotel</h2>
                         <thead class="bg-gray-100 text-black uppercase text-center text-xs">
                             <tr>
                                 <th class=" py-3">Hotel ID</th>
@@ -188,7 +132,7 @@
                             </tr>
                         </thead>
                         <tbody id="hotel-body" class="divide-y text-center divide-gray-100">
-                          
+
                         </tbody>
                     </table>
                 </div>
